@@ -55,7 +55,8 @@ ReactDOM.render(<App />, document.querySelector("#app"));
 
 If your components are properly "rendered" then your html page should show your components, like this for example:
 
-image
+<img width="377" height="149" alt="2025-10-02 18_26_06-Hello World and 4 more pages - Personal - Microsoft​ Edge" src="https://github.com/user-attachments/assets/0b638839-3b76-47e5-8830-f2f80f45693e" />
+
 
 ### X/X/XX:
 * Text
