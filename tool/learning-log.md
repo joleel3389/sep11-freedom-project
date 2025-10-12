@@ -81,7 +81,7 @@ If your components are properly "rendered" then your html page should show your 
         * Use it by surrounding your variable with a double curly bracket on both sides. Such as `{{number}}` or ``{{name}}``
         * You will then be able to properly define this variable in your JavaScript "script" tags.
 * Importing vue functions
-    * You can import Vue functions into the script tag of your HTML page like so
+    * You can import Vue functions into the script tag of your HTML page shown below
         * This allows you to actually use these functions on your page
 ```js
 const { createApp, ref } = Vue
@@ -115,7 +115,7 @@ image
 Here's what the HTML preview would look like.
 
 ### x/x/xx: topic
-* 
+*
 
 <!--
 * Links you used today (websites, videos, etc)
