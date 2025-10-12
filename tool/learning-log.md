@@ -110,7 +110,7 @@ createApp({
 
 Once you add it all up, it should look something like the code above. It'll work together to allow the variable that you just set a value for to show up on your HTML preview.
 
-<img width="1346" height="897" alt="2025-10-12 17_47_11-vue js testing and 5 more pages - Personal - Microsoft​ Edge" src="https://github.com/user-attachments/assets/7df84e21-feda-4e35-8a99-82039f678d6f" />
+<img width="810" height="528" alt="2025-10-12 17_47_11-vue js testing and 5 more pages - Personal - Microsoft​ Edge" src="https://github.com/user-attachments/assets/fee37a57-c03b-4c21-8da1-51d7fd4b5946" />
 
 Here's what the HTML preview would look like.
 
