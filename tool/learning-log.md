@@ -59,6 +59,8 @@ If your components are properly "rendered" then your html page should show your 
 
 
 ### 10/6/25: Testing Vue js
+Using [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~0y3o)
+
 * What is Vue js?
     * A friendly and simple javascript framework to help build interfaces
     * Builds on HTML, CSS, and JavaScript
@@ -113,6 +115,42 @@ Once you add it all up, it should look something like the code above. It'll work
 <img width="377" height="250" alt="2025-10-12 17_47_11-vue js testing and 5 more pages - Personal - Microsoft​ Edge" src="https://github.com/user-attachments/assets/fea091ab-3025-42e5-90f1-27ea5e734e25" />
 
 Here's what the HTML preview would look like.
+
+### 10/13/25: More Vue js practice
+Using [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~0ykp)
+
+* Using return in your app instance
+    * When you use "return" for multiple variables in your app instance, you should only have one line with return.
+    * Additionally, you should put your variables within the opening and closing of ONE curly bracket.
+        * Ex. `return {var1, var2, var3}`
+* Reminder: Using a setup function is crucial.
+    * This allows your app to run the code you have for your variables.
+* Vue reactivity
+    * Making parts of you website reactive makes your website dynamic.
+    * More powerful and easier to manage due to variables.
+
+* Installing Vue js locally
+    * To use Vue js locally, you must use a npm in your terminal.
+    * Many local Vue js projects use Vite.
+    * Steps in chronological order:
+```bash
+npm create vue@latest # to try to get the most up to date version
+# use "y" to proceed
+# insert the name you'd like for your Vue js project
+# answer the questions however you'd like about the features for your project
+# up and down arrows to switch between option, space to confirm, and enter for the next step
+# repeat for experimental features
+cd new-vue-project-name # go into your new vue project according to what you named it
+npm install
+npm run dev # starts development server
+```
+
+* If you get an error after the first step, run this:
+```bash
+npm install -g n
+sudo n 20.17.0  # use minimum required version
+npm install -g npm@11.6.2 # try to instal again
+```
 
 ### x/x/xx: topic
 *
