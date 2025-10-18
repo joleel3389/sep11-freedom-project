@@ -149,7 +149,7 @@ npm run dev # starts development server
 ```bash
 npm install -g n
 sudo n 20.17.0  # use minimum required version
-npm install -g npm@11.6.2 # try to instal again
+npm install -g npm@11.6.2 # try to install again
 ```
 
 ### x/x/xx: topic
