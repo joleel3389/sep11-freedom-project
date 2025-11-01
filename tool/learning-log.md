@@ -1,13 +1,13 @@
 # Tool Learning Log
 
-## Tool: **Vue js**
+## Tool: **Vue JS**
 
 ## Project: **Calculus concepts memorization game**
 
 ---
 
-### 9/29/25: Testing React js
-* What are components in React js
+### 9/29/25: Testing React JS
+* What are components in React JS
     * Piece of the user interface that plays its own role on your website. Has a unique appearance and function.
     * Can be as small as a button or as big as your page.
     * Components must start with a capital letter
@@ -19,15 +19,15 @@
     * You must also set the type of your script to babel
         * Like so, `<script type="text/babel">`
 ```html
-<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://unpkg.com/react@18/umd/react.development.JS"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.JS"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.JS"></script>
 ```
 
 * In order to use components, you must have a root component.
     * Once you have a root component, you can put other components inside it.
 For example, the use of `<Home />` within my root component "App"
-```js
+```JS
    function App() {
         return (
             <div>
@@ -43,14 +43,14 @@ For example, the use of `<Home />` within my root component "App"
 
 * Components must also include a react dom render.
     * Use the name of your root component so all the components including it and within it will appear on when you're viewing your HTML page.
-```js
+```JS
 ReactDOM.render(<App />, document.querySelector("#app"));
 ```
 
-* If you use separate .js files for your components, they must be linked onto your html page using `src="filename.js"` like so,
+* If you use separate .JS files for your components, they must be linked onto your html page using `src="filename.JS"` like so,
 ```html
-<script type="text/babel" src="App.js"></script>
-<script type="text/babel" src="Home.js"></script>
+<script type="text/babel" src="App.JS"></script>
+<script type="text/babel" src="Home.JS"></script>
 ```
 
 If your components are properly "rendered" then your html page should show your components, like this for example:
@@ -58,16 +58,16 @@ If your components are properly "rendered" then your html page should show your 
 <img width="377" height="149" alt="2025-10-02 18_26_06-Hello World and 4 more pages - Personal - Microsoft​ Edge" src="https://github.com/user-attachments/assets/0b638839-3b76-47e5-8830-f2f80f45693e" />
 
 
-### 10/6/25: Testing Vue js
+### 10/6/25: Testing Vue JS
 Using [Scrimba](https://scrimba.com/learn-Vue-c0jrrpaasr/~0y3o)
 
-* What is Vue js?
+* What is Vue JS?
     * A friendly and simple javascript framework to help build interfaces
     * Builds on HTML, CSS, and JavaScript
-* Setting up Vue js
-    * You can use Vue js on html using a [cdn](https://Vuejs.org/guide/quick-start#using-Vue-from-cdn) by putting the following code into your html header...
+* Setting up Vue JS
+    * You can use Vue JS on html using a [cdn](https://VueJS.org/guide/quick-start#using-Vue-from-cdn) by putting the following code into your html header...
 ```html
-<script src="https://unpkg.com/Vue@3/dist/Vue.global.js"></script>
+<script src="https://unpkg.com/Vue@3/dist/Vue.global.JS"></script>
 ```
 
 * How does Vue work?
@@ -85,7 +85,7 @@ Using [Scrimba](https://scrimba.com/learn-Vue-c0jrrpaasr/~0y3o)
 * Importing Vue functions
     * You can import Vue functions into the script tag of your HTML page shown below
         * This allows you to actually use these functions on your page
-```js
+```JS
 const { createApp, ref } = Vue
 ```
 
@@ -100,7 +100,7 @@ const { createApp, ref } = Vue
     * Mount connects all of the code inside of your app instance.
     * Vue will take over the element it's attached to, and then applies all set and returned changes to your HTML page in real time.
 
-```js
+```JS
 const { createApp, ref } = Vue
 createApp({
     setup() {
@@ -112,11 +112,11 @@ createApp({
 
 Once you add it all up, it should look something like the code above. It'll work together to allow the variable that you just set a value for to show up on your HTML preview.
 
-<img width="377" height="250" alt="2025-10-12 17_47_11-Vue js testing and 5 more pages - Personal - Microsoft​ Edge" src="https://github.com/user-attachments/assets/fea091ab-3025-42e5-90f1-27ea5e734e25" />
+<img width="377" height="250" alt="2025-10-12 17_47_11-Vue JS testing and 5 more pages - Personal - Microsoft​ Edge" src="https://github.com/user-attachments/assets/fea091ab-3025-42e5-90f1-27ea5e734e25" />
 
 Here's what the HTML preview would look like.
 
-### 10/13/25: More Vue js practice
+### 10/13/25: More Vue JS practice
 Using [Scrimba](https://scrimba.com/learn-Vue-c0jrrpaasr/~0ykp)
 
 * Using return in your app instance
@@ -129,14 +129,14 @@ Using [Scrimba](https://scrimba.com/learn-Vue-c0jrrpaasr/~0ykp)
     * Making parts of you website reactive makes your website dynamic.
     * More powerful and easier to manage due to variables.
 
-* Installing Vue js locally
-    * To use Vue js locally, you must use a npm in your terminal.
-    * Many local Vue js projects use Vite.
+* Installing Vue JS locally
+    * To use Vue JS locally, you must use a npm in your terminal.
+    * Many local Vue JS projects use Vite.
     * Steps in chronological order:
 ```bash
 npm create Vue@latest # to try to get the most up to date version
 # use "y" to proceed
-# insert the name you'd like for your Vue js project
+# insert the name you'd like for your Vue JS project
 # answer the questions however you'd like about the features for your project
 # up and down arrows to switch between option, space to confirm, and enter for the next step
 # repeat for experimental features
@@ -160,9 +160,9 @@ Using [Scrimba](https://scrimba.com/learn-Vue-c0jrrpaasr/~06ia)
     * The components folder lives in here, too.
         * Components = chunks of code that'll make up your app interface
 * `App.Vue` is the heart of your application - **the main view file**
-* `main.js` is the JS file that links your HTML to your Vue project.
+* `main.JS` is the JS file that links your HTML to your Vue project.
     * The importing you'd normally have to do while using a CDN will sit in here.
-    ```js
+    ```JS
     import { createApp } from 'vue'
     import App from './App.vue'
 
@@ -170,29 +170,29 @@ Using [Scrimba](https://scrimba.com/learn-Vue-c0jrrpaasr/~06ia)
     ```
     * Like the "createApp" and "mount" concepts
 * Main HTML page - **where your HTML is mounted to your main JS file**
-    * Includes a script tag back to the `main.js` file.
+    * Includes a script tag back to the `main.JS` file.
     * Entire Vue app mounted into your "app" div
     ```html
     <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/main.JS"></script>
     ```
 * Public folder
     * Where you put your files that you want exposed to the public.
     * Ex. Favicon files
 * Config files
-    * Includes `jsconfig.json`, `package-loc.json`, `package.json`, and `vite.config.js`
+    * Includes `JSconfig.JSon`, `package-loc.JSon`, `package.JSon`, and `vite.config.JS`
     * Allow Vue to work nicely
-    * `jsconfig.json` determines what files should be compiled within the project
-    * `package-lock.json` and `package.json` list dependencies like Vue, Vite, developer tools, and scripts.
-    * `vite.config.js` holds the configuration settings for Vite (build tool powering the project)
+    * `JSconfig.JSon` determines what files should be compiled within the project
+    * `package-lock.JSon` and `package.JSon` list dependencies like Vue, Vite, developer tools, and scripts.
+    * `vite.config.JS` holds the configuration settings for Vite (build tool powering the project)
         * Vue and Vue Dev Tools are imported and applied as plugins for Vite
             * Disable either by simply commenting it out or deleting it.
             Example
-            ```js
+            ```JS
             import { fileURLToPath, URL } from 'node:url'
 
             import { defineConfig } from 'vite'
-            import vue from '@vitejs/plugin-vue'
+            import vue from '@viteJS/plugin-vue'
             <!-- import vueDevTools from 'vite-plugin-vue-devtools' -->
 
             // https://vite.dev/config/
@@ -209,6 +209,134 @@ Using [Scrimba](https://scrimba.com/learn-Vue-c0jrrpaasr/~06ia)
             })
             ```
 
+### 10/27/25: Introduction to functions in Vue JS
+Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~02zo)
+* App.vue -> where most of your work will be done
+    * Script tag holds JS
+    * Template tag holds HTML
+    * Style tag holds CSS
+* Use `npm run dev` to see your preview. (not `http-server`)
+* By using Vue locally, you no longer need to mount, use functions, or more code than you need to.
+    * You can simply import what you want to use and define variablesin your JS section.
+* The setup keyword in our JS section of App.vue makes code simpler on the local Vue JS.
+    * Seen like `<script setup></script>`
+* Using `<template></template>` removes any need of having to use meta tags in an HTML header.
+* CSS is conviently in the same App.vue file as JS and HTML.
+
+Practice: follow the challenge
+* Instructions (JS)
+```js
+<script setup>
+/*
+CHALLENGE: Make the copyright year dynamic and blue
+IN SCRIPT: Create a new ref to house a different year
+IN TEMPLATE: Change the static "2025" to render the new ref
+IN STYLE: Target the paragraph tag in the footer and make it blue
+*/
+  import {ref} from 'vue'
+  const name = ref('Rachel')
+  const emoji = ref('✌🏻')
+</script>
+```
+* HTML starter code
+```html
+<template>
+  <header>
+    <span>{{emoji}}</span>
+  </header>
+
+  <main>
+    <h1>Hello, {{name}}!</h1>
+    <p>I'm about to learn <a href="https://vuejs.org/" target="_blank">Vue.js</a>!</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025</p>
+  </footer>
+</template>
+```
+* CSS starter code
+```css
+<style scoped>
+  header span{
+    font-size:3rem;
+  }
+  main h1{
+      display:block;
+  }
+  main a{
+      color: #42B883;
+  }
+  footer {
+      position:fixed;
+      bottom:0;
+      padding-bottom:20px;
+  }
+</style>
+```
+
+* To create a new ref, I created a new constant ref named "year" and defined it to be "2026"
+    * Creating a ref is kind of similar to JS variables.
+        * You can refer to them in your HTML part with `{{variableName}}`
+    * I didn't need to use `.mount` since I'm not using a CDN here and it felt more easier to navigate.
+    ```js
+    <script setup>
+    /*
+    CHALLENGE: Make the copyright year dynamic and blue
+    IN SCRIPT: Create a new ref to house a different year
+    IN TEMPLATE: Change the static "2025" to render the new ref
+    IN STYLE: Target the paragraph tag in the footer and make it blue
+    */
+    import {ref} from 'vue'
+    const name = ref('Rachel')
+    const emoji = ref('✌🏻')
+    const year = ref('2026')
+    </script>
+    ```
+* I then made sure I referenced this ref I created in the HTML portion (template), otherwise it wouldn't have showm up
+    * Referred to the same ref I had just created in my JS script tags
+    ```html
+    <template>
+    <header>
+        <span>{{emoji}}</span>
+    </header>
+
+    <main>
+        <h1>Hello, {{name}}!</h1>
+        <p>I'm about to learn <a href="https://vuejs.org/" target="_blank">Vue.js</a>!</p>
+    </main>
+
+    <footer>
+        <p> &copy; {{year}} </p>
+    </footer>
+    </template>
+    ```
+* After, I made sure to specify the paragraph tag in the footer, so I could recolor it to blue
+    * You can specifically identify an element tag without the use of class or id by identifying the tag it was inside.
+        * I observed this after reading the rest of the starter code
+        * This p tag was inside the footer, so i put "footer p"
+        * Most likely only works if you have one of that element within a section.
+    ```css
+    <style scoped>
+    header span{
+        font-size:3rem;
+    }
+    main h1{
+        display:block;
+    }
+    main a{
+        color: #42B883;
+    }
+    footer {
+        position:fixed;
+        bottom:0;
+        padding-bottom:20px;
+    }
+    footer p{
+        color:blue;
+    }
+    </style>
+    ```
 
 ### x/x/xx: topic
 *
