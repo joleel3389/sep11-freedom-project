@@ -217,7 +217,7 @@ Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~02zo)
     * Style tag holds CSS
 * Use `npm run dev` to see your preview. (not `http-server`)
 * By using Vue locally, you no longer need to mount, use functions, or more code than you need to.
-    * You can simply import what you want to use and define variablesin your JS section.
+    * You can simply import what you want to use and define variables in your JS section.
 * The setup keyword in our JS section of App.vue makes code simpler on the local Vue JS.
     * Seen like `<script setup></script>`
 * Using `<template></template>` removes any need of having to use meta tags in an HTML header.
@@ -314,7 +314,7 @@ IN STYLE: Target the paragraph tag in the footer and make it blue
 * After, I made sure to specify the paragraph tag in the footer, so I could recolor it to blue
     * You can specifically identify an element tag without the use of class or id by identifying the tag it was inside.
         * I observed this after reading the rest of the starter code
-        * This p tag was inside the footer, so i put "footer p"
+        * This p tag was inside the footer, so I put "footer p"
         * Most likely only works if you have one of that element within a section.
     ```css
     <style scoped>
