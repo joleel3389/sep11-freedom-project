@@ -43,6 +43,7 @@ Below shows the difference between the JS code you would need between a CDN and 
 The following inputs don't give the same outcomes, but it goes to show that when you don't use a CDN and use Vue JS locally, it's easier as all you need to do is import the Vue function, and you can just define your Vue function values, which is `{ref}` in my case (for both examples). Using a CDN includes `.mount`, a setup function, a return statement, and just more than using Vue locally.
 
 Output comparison (top to bottom)
+
 <img width="377" height="250" alt="2025-10-12 17_47_11-Vue JS testing and 5 more pages - Personal - Microsoft​ Edge" src="https://github.com/user-attachments/assets/fea091ab-3025-42e5-90f1-27ea5e734e25" />
 
 <img width="1665" height="897" alt="2025-11-08 11_01_15-Window" src="https://github.com/user-attachments/assets/780c4a6c-02a2-481b-8204-61d5fae0c353" />
