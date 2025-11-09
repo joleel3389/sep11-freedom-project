@@ -338,6 +338,62 @@ IN STYLE: Target the paragraph tag in the footer and make it blue
     </style>
     ```
 
+### 11/8/25: topic
+Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~05kv)
+
+* Layout/structural components - not much logic
+    * Header
+    * Main
+    * Footer
+* Naming convention looks like `Capitalize.vue`
+* Each component has its own script setup, template, and style scope unique to and used by that component.
+* Ensure to import a Vue function whenever you use it.
+    * For example,
+    ```js
+    import {ref} from 'vue'
+    const emoji = ref('✌`)
+    ```
+* When you move a structural component and want it to appear on your `App.vue`, you must import it.
+    * Example
+    ```js
+    import Header from `@/components/Header.vue'
+    // "Header" refers to the name of the component
+    //
+    ```
+    * You can then use this by typing the tag into your HTML/template section on your actual `App.vue`.
+        * If it was named "Header" like in the previous example, use `<Header/>`
+            * Capitalize the first word to match the typical Vue JS naming convention.
+* The purpose of `App.vue` is to bring the header, main, and footer components together.
+* Full example
+```js
+<script setup>
+  import Header from '@/components/Header.vue'
+  import Main from '@/components/Main.vue'
+  import Footer from '@/components/Footer.vue'
+/*
+CHALLENGE: Separate the <main> and <footer> elements into
+           <Main/> and <Footer/> components and use them
+           in App.vue
+
+STEP 1: Create the component file in /components
+STEP 2: Set up the script/template/style skeleton
+STEP 3: Pull the relevant JS, HTML and CSS into the component
+STEP 4: Import component back in App.vue
+STEP 5: Use component in App.vue template
+*/
+</script>
+```
+```html
+<template>
+
+  <Header/>
+  <Main/>
+  <Footer/>
+
+</template>
+```
+* The child components were moved into their respective component folders with their corresponding elements.
+
 ### x/x/xx: topic
 *
 
