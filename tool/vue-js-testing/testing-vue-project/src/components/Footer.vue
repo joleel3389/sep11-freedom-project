@@ -1,6 +1,6 @@
 <script setup>
     import {ref} from 'vue'
-    const year = ref('2026')
+    const year = ref('2030')
 </script>
 
 <template>

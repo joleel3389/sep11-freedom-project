@@ -1,9 +1,9 @@
 <script setup>
     /*
     import {ref} from 'vue'
-    const name = ref('Rachel')
+    const name = ref('Jolee')
     const emoji = ref('✌🏻')
-    const year = ref('2026')
+    const year = ref('2030')
     */
 
     import Header from '@/components/Header.vue'
