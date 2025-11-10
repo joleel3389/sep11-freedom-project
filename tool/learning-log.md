@@ -338,7 +338,7 @@ IN STYLE: Target the paragraph tag in the footer and make it blue
     </style>
     ```
 
-### 11/8/25: topic
+### 11/10/25: topic
 Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~05kv)
 
 * Layout/structural components - not much logic
@@ -394,6 +394,90 @@ STEP 5: Use component in App.vue template
 ```
 * The child components were moved into their respective component folders with their corresponding elements.
 
+My application:
+* Before
+
+    img space
+
+* JavaScript
+```js
+<script setup>
+    /*
+    import {ref} from 'vue'
+    const name = ref('Jolee')
+    const emoji = ref('✌🏻')
+    const year = ref('2030')
+    */
+
+    import Header from '@/components/Header.vue'
+    import Main from '@/components/Main.vue'
+    import Footer from '@/components/Footer.vue'
+</script>
+```
+
+* HTML
+```html
+<template>
+    <Header/>
+    <Main/>
+    <Footer/>
+    <!--
+    <header>
+        <span>{{emoji}}</span>
+    </header>
+    -->
+
+    <!--
+    <main>
+        <h1>Hello, {{name}}!</h1>
+        <p>I'm about to learn <a href="https://vuejs.org/" target="_blank">Vue.js</a>!</p>
+    </main>
+    -->
+
+    <!--
+    <footer>
+        <p> &copy; {{year}} </p>
+    </footer>
+    -->
+</template>
+```
+
+* CSS
+```css
+<style scoped>
+    /*
+    header span{
+        font-size:3rem;
+    }
+    */
+
+    /*
+    main h1{
+        display:block;
+    }
+    main a{
+        color: #42B883;
+    }
+    */
+
+    /*
+    footer {
+        position:fixed;
+        bottom:0;
+        padding-bottom:20px;
+    }
+    footer p{
+        color:blue;
+    }
+    */
+</style>
+```
+
+* After preview
+
+    img space
+
+    * Preview is the same before and after, so we know that the structural components are working.
 ### x/x/xx: topic
 *
 
