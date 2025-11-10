@@ -397,7 +397,7 @@ STEP 5: Use component in App.vue template
 My application:
 * Before
 
-    img space
+    <img width="1348" height="586" alt="Screenshot 2025-11-10 11 53 15 AM" src="https://github.com/user-attachments/assets/de6dc4f7-814d-40c7-bf90-63d350a07d2a" />
 
 * JavaScript
 ```js
@@ -475,7 +475,7 @@ My application:
 
 * After preview
 
-    img space
+    <img width="1348" height="586" alt="Screenshot 2025-11-10 11 53 15 AM" src="https://github.com/user-attachments/assets/52e156c9-b2f5-4dd4-91cf-aace9f279617" />
 
     * Preview is the same before and after, so we know that the structural components are working.
 ### x/x/xx: topic
