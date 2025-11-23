@@ -478,6 +478,81 @@ My application:
     <img width="1348" height="586" alt="Screenshot 2025-11-10 11 53 15 AM" src="https://github.com/user-attachments/assets/52e156c9-b2f5-4dd4-91cf-aace9f279617" />
 
     * Preview is the same before and after, so we know that the structural components are working.
+
+### 11/17/25: The @ alias
+Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~05xz)
+* The `@` character is apart of the file path
+    * However, you can still use the well known `./` as your path indicator, and it'll still work.
+        * Start from the current directory and traverse from there
+    * For example, changing from this
+    ```js
+    <script setup>
+        import Header from '@/components/Header.vue'
+        import Main from '@/components/Main.vue'
+        import Footer from '@/components/Footer.vue'
+    </script>
+    ```
+    * To this technically will still work since `App.vue` sits in the `src/` folder.
+    ```js
+    <script setup>
+        import Header from './components/Header.vue'
+        import Main from './components/Main.vue'
+        import Footer from './components/Footer.vue'
+    </script>
+    ```
+    * This is called relative traversing, but it's not very helpful for more complicated apps.
+* More about the `@` alias given by Vite
+    * Seen in the `vite.config.js` file, within these three lines of code:
+    ```js
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    },
+    ```
+    * Creates a shortcut for our project
+    * Means replace `@` for the absolute file path to the `src/` folder
+    * In short, it creates a URL to the `src/` folder
+
+Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~0gk)
+* Creating Vue project from scratch
+```bash
+npm create vue
+cd vue-project
+npm install
+npm run dev
+```
+* When you import structural components, you must create a folder for those components with files named after `.vue`
+    * If not using variables, nothing needs to go into the script.
+* Ex. `Header.vue`
+```js
+<script setup>
+</script>
+```
+* Copy HTML into `Header.vue`
+```html
+<template>
+    <header>
+        <h1>Quote generator</h1>
+    </header>
+</template>
+```
+* Copy CSS into `Header.vue`
+```css
+<style scoped>
+  header {
+    color:#CCD6D9;
+    margin-bottom:25px;
+  }
+</style>
+```
+
+* In the main `App.vue`, just import
+```js
+<script setup>
+    import Header from '@/components/Header.vue'
+</script>
+```
+
+
 ### x/x/xx: topic
 *
 
