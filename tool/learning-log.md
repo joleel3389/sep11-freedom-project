@@ -552,6 +552,52 @@ npm run dev
 </script>
 ```
 
+### 12/1/25: more vue components practice
+Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~05ho)
+
+* What if we want to apply base styling/CSS?
+    * Won't work if you just put it in a `<style scoped>` tag in the `App.vue` file, since "scoped" means it'll only apply to the current component.
+* `main.js`is where our `Vue.app` is created
+    * Mounts HTML
+    * Imports CSS
+        * Where we should put our base CSS/styling
+* How can we save our base css?
+    * In the `main.js` file, ensure that you import a `main.css` file
+    ```js
+    import './assets/main.css'
+
+    import { createApp } from 'vue'
+    import App from './App.vue'
+
+    createApp(App).mount('#app')
+
+    /*
+    CHALLENGE: Apply the mockup's base styles to the Vue App
+    */
+    ```
+    * Then, go to your `main.css` file and put your base styling there
+    ```css
+    *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+    body{
+        background-color:#406473;
+        font-family: sans-serif;
+    }
+
+    #app {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:25px;
+    }
+    ```
+    * This is the base styling because it targets the body, app id, and uses the universal selector
+* If you have a targetted line of CSS, like `footer span` and import the footer, you don't need to repeat "footer" in your `Footer.vue` file.
+    * It makes more sense to specify a parent in a regular `style.css` file, if we were to compare it. 
 
 ### x/x/xx: topic
 *
