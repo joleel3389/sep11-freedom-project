@@ -562,7 +562,7 @@ Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~05ho)
     * Imports CSS
         * Where we should put our base CSS/styling
 * How can we save our base css?
-    * In the `main.js` file, ensure that you import a `main.css` file
+    * In the `main.js` file, ensure that you import a `main.css` file like so
     ```js
     import './assets/main.css'
 
