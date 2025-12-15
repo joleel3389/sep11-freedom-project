@@ -604,7 +604,9 @@ Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~0xt3/s0blb8o0k1/head)
 
 Challenge: follow the Vue mockup using prior knowledge
 * Remember to add stuctural components into a components folder
+  
     <img width="279" height="216" alt="2025-12-14 17_11_31-Window" src="https://github.com/user-attachments/assets/5ff6a40c-6c34-4516-9ddc-a17ff4252b2e" />
+    
 * Remember to import structural components (Header, Main, Footer)
     ```js
     <script setup>
