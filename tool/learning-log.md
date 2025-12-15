@@ -597,10 +597,92 @@ Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~05ho)
     ```
     * This is the base styling because it targets the body, app id, and uses the universal selector
 * If you have a targetted line of CSS, like `footer span` and import the footer, you don't need to repeat "footer" in your `Footer.vue` file.
-    * It makes more sense to specify a parent in a regular `style.css` file, if we were to compare it. 
+    * It makes more sense to specify a parent in a regular `style.css` file, if we were to compare it.
 
-### x/x/xx: topic
-*
+### 12/8/25: code cleaning practice
+Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~0xt3/s0blb8o0k1/head)
+
+Challenge: follow the Vue mockup using prior knowledge
+* Remember to add stuctural components into a components folder
+    img
+* Remember to import structural components (Header, Main, Footer)
+    ```js
+    <script setup>
+        /*
+        CHALLENGE: Turn the provided HTML/CSS mockup into a Vue app that
+                uses three components: Header, Main, and Footer.
+                Make sure you use all the provided CSS!
+        */
+        import Header from '@/components/Header.vue'
+        import Main from '@/components/Main.vue'
+        import Footer from '@/components/Footer.vue'
+    </script>
+    ```
+* Remember to use the structural components in `App.vue`
+    ```html
+    <template>
+        <Header/>
+        <Main/>
+        <Footer/>
+    </template>
+    ```
+* Remember to simplify CSS accordingly
+    * In `Header.vue` or any of the structural components, remove repetitiveness
+        ```css
+        <style scoped>
+            img {
+                height: 150px;
+            }
+            h1 {
+                font-size: 2rem;
+                color: #34495e;
+                margin-top: 10px;
+            }
+        </style>
+        ```
+        * Removed "header" from the beginning of the styles!
+* Keep the base CSS as it is n `main.css`
+    ```css
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #40b883;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #app {
+        background-color: #eee;
+        width: 80%;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 35px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    span.highlight {
+        color: #40b883;
+    }
+    ```
+* Use the rest of the preset code accordingly!
+    
+
+
 
 <!--
 * Links you used today (websites, videos, etc)
