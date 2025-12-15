@@ -599,12 +599,12 @@ Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~05ho)
 * If you have a targetted line of CSS, like `footer span` and import the footer, you don't need to repeat "footer" in your `Footer.vue` file.
     * It makes more sense to specify a parent in a regular `style.css` file, if we were to compare it.
 
-### 12/8/25: code cleaning practice
+### 12/8/25: Code cleaning practice
 Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~0xt3/s0blb8o0k1/head)
 
 Challenge: follow the Vue mockup using prior knowledge
 * Remember to add stuctural components into a components folder
-    img
+    <img width="279" height="216" alt="2025-12-14 17_11_31-Window" src="https://github.com/user-attachments/assets/5ff6a40c-6c34-4516-9ddc-a17ff4252b2e" />
 * Remember to import structural components (Header, Main, Footer)
     ```js
     <script setup>
@@ -680,9 +680,12 @@ Challenge: follow the Vue mockup using prior knowledge
     }
     ```
 * Use the rest of the preset code accordingly!
-    
-
-
+    <img width="600" height="428" alt="2025-12-14 19_18_50-Window" src="https://github.com/user-attachments/assets/d7bc5d05-82af-4195-bb6e-581c4e5c1286" />
+    <img width="652" height="510" alt="2025-12-14 19_19_07-Window" src="https://github.com/user-attachments/assets/98e44dbc-12e6-4f2a-95fd-d62b0f5d6200" />
+    <img width="890" height="767" alt="2025-12-14 19_19_47-Window" src="https://github.com/user-attachments/assets/d40f47e2-4f35-4f96-8eeb-ac933fc55558" />
+    <img width="917" height="610" alt="2025-12-14 19_19_58-Window" src="https://github.com/user-attachments/assets/1ffac98d-7a47-483c-a394-1cad63122ba3" />
+    <img width="919" height="418" alt="2025-12-14 19_20_07-Window" src="https://github.com/user-attachments/assets/93bb6416-c030-42c5-97c9-3c97d914c0b0" />
+  
 
 <!--
 * Links you used today (websites, videos, etc)
