@@ -643,7 +643,7 @@ Challenge: follow the Vue mockup using prior knowledge
         </style>
         ```
         * Removed "header" from the beginning of the styles!
-* Keep the base CSS as it is n `main.css`
+* Keep the base CSS as it is in `main.css`
     ```css
     @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
