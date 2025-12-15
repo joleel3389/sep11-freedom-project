@@ -682,6 +682,7 @@ Challenge: follow the Vue mockup using prior knowledge
     }
     ```
 * Use the rest of the preset code accordingly!
+  
     <img width="600" height="428" alt="2025-12-14 19_18_50-Window" src="https://github.com/user-attachments/assets/d7bc5d05-82af-4195-bb6e-581c4e5c1286" />
     <img width="652" height="510" alt="2025-12-14 19_19_07-Window" src="https://github.com/user-attachments/assets/98e44dbc-12e6-4f2a-95fd-d62b0f5d6200" />
     <img width="890" height="767" alt="2025-12-14 19_19_47-Window" src="https://github.com/user-attachments/assets/d40f47e2-4f35-4f96-8eeb-ac933fc55558" />
