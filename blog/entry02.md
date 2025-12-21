@@ -46,7 +46,7 @@ Finally, for our Vue app to function as it would without simplifying the layout/
 <img width="917" height="610" alt="2025-12-14 19_19_58-Window" src="https://github.com/user-attachments/assets/1ffac98d-7a47-483c-a394-1cad63122ba3" />
 <img width="919" height="418" alt="2025-12-14 19_20_07-Window" src="https://github.com/user-attachments/assets/93bb6416-c030-42c5-97c9-3c97d914c0b0" />
 
-The last step for our preview to look as we want it would be to consider the addition of our `main.css`.
+Additionally, another last step for our preview to look as we want it would be to consider the addition of our own `main.css` file, that's held in the `src/assets/` folder. This is incase we want CSS that'll apply to the whole app, not just one component!
 
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
@@ -88,7 +88,7 @@ span.highlight {
 
 With the last addition of our `main.css`, everything comes together and appear in the preview, but simplified and clean in our `App.vue`. We won't have a ton of code to scroll through on one page, but instead code separated and organized into their own pages, which would make it easier to look for bugs. The following image below shows the final outcome/preview:
 
-img
+<img width="505" height="615" alt="2025-12-21 15_36_11-Window" src="https://github.com/user-attachments/assets/c9630a02-9d0b-423f-b7b2-13bd5e907bc6" />
 
 ### Engineering Design Process
 
