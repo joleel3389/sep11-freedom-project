@@ -604,9 +604,9 @@ Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~0xt3/s0blb8o0k1/head)
 
 Challenge: follow the Vue mockup using prior knowledge
 * Remember to add stuctural components into a components folder
-  
+
     <img width="279" height="216" alt="2025-12-14 17_11_31-Window" src="https://github.com/user-attachments/assets/5ff6a40c-6c34-4516-9ddc-a17ff4252b2e" />
-    
+
 * Remember to import structural components (Header, Main, Footer)
     ```js
     <script setup>
@@ -682,13 +682,45 @@ Challenge: follow the Vue mockup using prior knowledge
     }
     ```
 * Use the rest of the preset code accordingly!
-  
+
     <img width="600" height="428" alt="2025-12-14 19_18_50-Window" src="https://github.com/user-attachments/assets/d7bc5d05-82af-4195-bb6e-581c4e5c1286" />
     <img width="652" height="510" alt="2025-12-14 19_19_07-Window" src="https://github.com/user-attachments/assets/98e44dbc-12e6-4f2a-95fd-d62b0f5d6200" />
     <img width="890" height="767" alt="2025-12-14 19_19_47-Window" src="https://github.com/user-attachments/assets/d40f47e2-4f35-4f96-8eeb-ac933fc55558" />
     <img width="917" height="610" alt="2025-12-14 19_19_58-Window" src="https://github.com/user-attachments/assets/1ffac98d-7a47-483c-a394-1cad63122ba3" />
     <img width="919" height="418" alt="2025-12-14 19_20_07-Window" src="https://github.com/user-attachments/assets/93bb6416-c030-42c5-97c9-3c97d914c0b0" />
-  
+
+### 12/22/25 - Starting reactivity
+Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~03af)
+
+* Reactive state summary
+    * When you change something about a reactive element, Vue will automatically update it
+    * Live and automatic
+    * Vue does the work for you, as long as your variable is in a live and reactive state
+* Reactive state variables are made using `ref()`
+    * To state a constant variable, but to wrap the intended value with `ref()`
+* EX
+    ```js
+    <script setup>
+        import {ref} from 'vue'
+        const quote = ref("First, solve the problem. Then, write the code.")
+    /*
+    CHALLENGE: Create a reactive variable to house the author
+    */
+    </script>
+    ```
+    * You would look at the reactive quote variable and take inspiration from it like so:
+        ```js
+        <script setup>
+            import {ref} from 'vue'
+            const quote = ref("First, solve the problem. Then, write the code.")
+            const author = ref("John Johnson")
+        /*
+        CHALLENGE: Create a reactive variable to house the author
+        */
+        </script>
+        ```
+* Ensure that whenever you use a reactive variable, you import `{ref}` in your `<script setup>` tags
+
 
 <!--
 * Links you used today (websites, videos, etc)
