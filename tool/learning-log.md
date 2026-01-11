@@ -721,6 +721,39 @@ Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~03af)
         ```
 * Ensure that whenever you use a reactive variable, you import `{ref}` in your `<script setup>` tags
 
+### 1/9/26 - Template syntax
+Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~03ju)
+
+* Rendering reactive elements to the page
+* Vue uses an HTML based syntax
+    * Allows the binding of data
+        * Ex. from refs to certain elements
+* How to use a ref?
+    * Use double squiggly brackets to replace your hard coded element with the ref name.
+        * So if the JS part looks like this, and it's called "title"...
+        ```js
+        <script setup>
+        import {ref} from 'vue'
+        const title = ref("Quote Generator")
+        </script>
+        ```
+        * We would go to the HTML part (template) and replace the hard coded title to our ref "title".
+        ```html
+        <template>
+            <header>
+                <h1>{{title}}</h1>
+            </header>
+        </template>
+        ```
+* If I had title attached to a ref, technically `.value` needs to be used to change its value.
+    * Instead of changing the parameter within ref,
+        * `const title = ref("Programming quotes")`
+    * Change the `.value` of "title" like so...
+        * `title.value = "Programming Quotes"`
+    * Despite this, it's totally fine to keep "title" within the template/HTML section! Vue will know to update it.
+* You do not only need to use strings for your ref, you're free to use booleans, arrays, or numbers.
+    * Just remember to use quotations whenever you need them
+
 
 <!--
 * Links you used today (websites, videos, etc)
