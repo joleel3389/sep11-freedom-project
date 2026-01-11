@@ -689,7 +689,7 @@ Challenge: follow the Vue mockup using prior knowledge
     <img width="917" height="610" alt="2025-12-14 19_19_58-Window" src="https://github.com/user-attachments/assets/1ffac98d-7a47-483c-a394-1cad63122ba3" />
     <img width="919" height="418" alt="2025-12-14 19_20_07-Window" src="https://github.com/user-attachments/assets/93bb6416-c030-42c5-97c9-3c97d914c0b0" />
 
-### 12/22/25 - Starting reactivity
+### 12/29/25 - Starting reactivity
 Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~03af)
 
 * Reactive state summary
