@@ -21,6 +21,8 @@ When we import refs like this; `{ref}`, this allows us to override the hard code
 
 This live property of refs can be seen below as I play with the title:
 
+![ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/36b403c9-cfe8-4972-886b-5d14d2816c7d)
+
 Besides assigning a new value to a reactive element (using ref), there's another way to override the value for your element. This method overwrites whatever you have written in the parameters of `ref()`. For instance, if I had the following reactive element:
 
 ```js
@@ -54,7 +56,7 @@ I'm able to override the value assigned to "title" (using `ref()`) by using `tit
 ```
 Within the HTML, you can still keep `{{title}}`, so that Vue knows to update it. Disregarding the value assigned to title using `ref()`, the resulting page will appear like this.
 
-
+<img width="840" height="921" alt="2026-02-08 13_13_06-Vite App - Personal - Microsoft​ Edge" src="https://github.com/user-attachments/assets/03e9f9a1-cfae-4226-b74f-070bca7d9f7a" />
 
 ### Engineering Design Process
 
