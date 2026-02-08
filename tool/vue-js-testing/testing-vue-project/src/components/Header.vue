@@ -1,16 +1,17 @@
 <script setup>
-    import {ref} from 'vue'
-    const emoji = ref('✌🏻')
+  import {ref} from 'vue'
+  const title = ref("Programming Quotes")
 </script>
 
 <template>
-    <header>
-        <span>{{emoji}}</span>
-    </header>
+  <header>
+      <h1>{{title}}</h1>
+  </header>
 </template>
 
 <style scoped>
-    header span{
-        font-size:3rem;
-    }
+  header {
+      color:#CCD6D9;
+      margin-bottom:25px;
+  }
 </style>
