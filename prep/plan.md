@@ -18,12 +18,12 @@
   - [ ] Use MCQ with the list with  4 options each (deadline : 2/23/26)
 - [ ] Building the website
   - [ ] Start with the HTML (deadline: 3/9/26)
-    - [ ] Questions
-    - [ ] Radio buttons
-    - [ ] Submit button?
+    - [ ] Questions (using HTML tags like headers, p)
+    - [ ] Radio buttons (radio)
+    - [ ] Submit button? (button)
   - [ ] Make it reactive with Vue (deadline: 3/16/26)
-    - [ ] Reactive elements
-    - [ ] Make key components
+    - [ ] Reactive elements (apart of vue)
+    - [ ] Make key components (header.vue, etc.)
   - [ ] Utilize conditionals to check correct answers (deadline: 3/23/26)
   - [ ] Have a score counter (deadline: 3/16/26)
   - [ ] Allow the user to play again with a possible button (deadline: 3/30/26)
