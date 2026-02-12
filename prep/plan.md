@@ -16,7 +16,7 @@
   - [ ] Have a list of possible flashcard prompts (deadline: 2/23/26)
   - [ ] connect the prompts with an answer on the same list (deadline: 2/23/26)
   - [ ] Use MCQ with the list with  4 options each (deadline : 2/23/26)
-- [ ] Building
+- [ ] Building the website
   - [ ] Start with the HTML (deadline: 3/9/26)
     - [ ] Questions
     - [ ] Radio buttons
