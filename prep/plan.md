@@ -9,8 +9,8 @@
 
 #### MVP
 
-- [ ] Briefly move tracks and learn how to handle user input with Vue.js instead of img/assets (deadline: 2/16/26)
-  - [ ] After, finish the remaining significant Scrimba Vue lessons (deadline: 2/23/26)
+- [ ] Briefly move tracks and learn how to handle user input with Vue.js instead of img/assets (deadline: 2/23/26)
+  - [ ] After, finish the remaining helpful Scrimba Vue lessons (deadline: 3/2/26)
     - [ ] Use this knowledge to draft how I'd use it in code (deadline: 3/2/26)
 - [ ] Have at least ONE set (preferably the unit circle)
   - [ ] Have a list of possible flashcard prompts (deadline: 2/23/26)
