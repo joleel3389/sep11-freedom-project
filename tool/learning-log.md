@@ -754,6 +754,57 @@ Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~03ju)
 * You do not only need to use strings for your ref, you're free to use booleans, arrays, or numbers.
     * Just remember to use quotations whenever you need them
 
+### 1/9/26 - Template syntax attribute binding
+Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~03q4)
+
+* We cannot do `<a href="{{href}}">`, so we must bind data to HTML attributes instead.
+    * Can be done with v-bind which you attach to HTML attributes like so; `v-bind:href="link"`
+        * Put v-bind inside an HTML tag.
+        * Will be data bound ot the link in this case.
+    * Ex.
+    ```js
+    <script setup>
+        import {ref} from 'vue'
+        const quote = ref("First, solve the problem. Then, write the code")
+        const author = ref("John Johnson")
+        const href = ref("https://en.wikipedia.org/wiki/Undocumented_feature")
+
+        quote.value = "It's a feature, not a bug."
+        author.value = "Unknown"
+        /*
+        CHALLENGE: Turn static author name into a dynamic link
+        STEP 1: Create a link Ref
+                (use whatever URL you want, or this one: https://en.wikipedia.org/wiki/Undocumented_feature)
+        STEP 2: Wrap the author span in anchor tags
+        STEP 3: Use v-bind to bind the href attribute to the link Ref
+        STEP 4: Fix up the styling
+        */
+    </script>
+    ```
+    ```html
+    <template>
+        <main>
+            <section>
+                <p>{{quote}}</p>
+                <a v-bind:href="href"><span>{{author}}</span></a>
+            </section>
+            <button>Another!</button>
+        </main>
+    </template>
+    ```
+    * Make sure to adjust CSS if needed based on parent child relationships.
+* Scope styles allows you to change the CSS of an element super quickly. (Using `<style scoped>`)
+
+
+<!-- Used [Youtube](https://www.youtube.com/watch?v=5uzbcDHzcc4)
+
+* v-bind acts similar to an electric socket, dynamically connecting the data property to 1 or more element attribute
+    * class & style bindings
+* To use v-bind, use `v-bind:` before a class attribute, or just a colon `:`
+    * By passing an object in, you can dynamically toggle classes.
+    ``` -->
+
+### x/x/xx -
 
 <!--
 * Links you used today (websites, videos, etc)
