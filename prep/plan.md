@@ -28,13 +28,11 @@
   - [ ] Have a score counter (deadline: 3/16/26)
   - [ ] Allow the user to play again with a possible button (deadline: 3/30/26)
 
-
 #### Beyond MVP
 
 - [ ] Make multiple sets
   - [ ] Maybe derivative rules(?)
 - [ ] Add a timer that can function
-
 
 <!-- EXAMPLE
 
