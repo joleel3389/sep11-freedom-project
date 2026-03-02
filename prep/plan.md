@@ -9,25 +9,25 @@
 
 #### MVP
 
-- [ ] Briefly move tracks and learn how to handle user input with Vue.js instead of img/assets (deadline: 2/23/26)
-  - [ ] After, try to finish the remaining helpful Scrimba Vue lessons (deadline: 3/2/26)
-    - [ ] Use this knowledge to draft how I'd use it in code (deadline: 3/2/26)
+- [ ] Briefly move tracks and learn how to handle user input with Vue.js instead of img/assets (deadline: 3/8/26)
+  - [ ] After, try to finish the remaining helpful Scrimba Vue lessons (deadline: 3/8/26)
+    - [ ] Use this knowledge to draft how I'd use it in code (deadline: 3/8/26)
 - [ ] Have at least ONE set (preferably the unit circle)
   - [ ] Have a list of possible flashcard prompts (deadline: 2/23/26)
   - [ ] connect the prompts with an answer on the same list (deadline: 2/23/26)
   - [ ] Use MCQ with the list with  4 options each (deadline : 2/23/26)
   - [The list](https://docs.google.com/document/d/14Hs1sqlnrC-T0Maj2uqyXInnc_HNusOyr9SurLk3zgw/edit?usp=sharing)
 - [ ] Building the website
-  - [ ] Start with the HTML (deadline: 3/9/26)
+  - [ ] Start with the HTML (deadline: 3/16/26)
     - [ ] Questions (using HTML tags like headers, p)
     - [ ] Radio buttons (radio)
     - [ ] Submit button? (button)
-  - [ ] Make it reactive with Vue (deadline: 3/16/26)
+  - [ ] Make it reactive with Vue (deadline: 3/23/26)
     - [ ] Reactive elements (apart of vue)
     - [ ] Make key components (header.vue, etc.)
-  - [ ] Utilize conditionals to check correct answers (deadline: 3/23/26)
+  - [ ] Utilize conditionals to check correct answers (deadline: 3/30/26)
   - [ ] Have a score counter (deadline: 3/16/26)
-  - [ ] Allow the user to play again with a possible button (deadline: 3/30/26)
+  - [ ] Allow the user to play again with a possible button (deadline: 4/6/26)
 
 #### Beyond MVP
 
