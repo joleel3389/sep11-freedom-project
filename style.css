@@ -1,0 +1,27 @@
+/* body {
+    background-color: #1C1921;
+} */
+.text-light{
+    color:#F2F3F1;
+}
+.text-dark{
+    color: #1C1921;
+}
+.suva-gray {
+    color: #838183 !important;
+}
+.oslo-gray {
+    color: #cad9d0 !important
+}
+.container {
+    padding: 150px 0px 30px 300px;
+    margin: auto;
+}
+#questionaire {
+    margin: auto;
+    text-align: center;
+    padding: 30px 0px 100px 0px;
+}
+input {
+    color: #F2F3F1;
+}
