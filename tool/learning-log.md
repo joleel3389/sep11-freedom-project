@@ -804,7 +804,140 @@ Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~03q4)
     * By passing an object in, you can dynamically toggle classes.
     ``` -->
 
-### x/x/xx -
+### 3/2/26 - progress check & v-bind
+Progress... Tried to begin by planning where the question would go and a navigation bar
+
+```html
+<nav class="navbar fixed-top bg-body-tertiary navbar-expand-lg" data-bs-theme="dark">
+    <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Calculus study mini-game</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="https://www.desmos.com/calculator" target="_blank">Calculator</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#help">Need help?</a>
+            </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="container" id="#questionaire">
+    <h2 class="text-dark">Placeholder question?</h2>
+    <input type="radio" name="mcq" value="1" id="Option1"> placeholder <br>
+    <input type="radio" name="mcq" value="2" id="Option2"> placeholder <br>
+    <input type="radio" name="mcq" value="3" id="Option3"> placeholder <br>
+    <input type="radio" name="mcq" value="4" id="Option4"> placeholder <br>
+    <!-- Each one has the same TYPE and NAME, so that the user can only select ONE option -->
+
+    <br>
+    <button>Submit</button>
+    <br>
+    <p></p>
+    </div>
+</div>
+```
+
+Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~06vz)
+
+* `v-bind` works with boolean attributes
+    * Attributes like disabled, as long as the `ref()` feeding it is a boolean.
+    * Will action accordingly
+    * Ex. `const isBtnDisabled = ref(false)`, `v-bind:disabled="isBtnDisabled"`
+        * the disabled attribute will be FALSE, so the button will NOT be disabled.
+* `v-bind` has "shorthands"
+    * Instead of `v-bind:`, just begin with a colon followed by the attribute like so- `:attribute`
+        * In full, `v-bind:attribute="value"` is shortened to `:attribute="value"`
+        * Of course, it functions the SAME exact way
+* If attribute (name) = value (that you're passing), you can remove the equal sign AND value.
+    * Ex. Instead of `:hef="href"`, we can use `:href` and it'll be the SAME
+
+Used [Scrimba](https://scrimba.com/learn-vue-c0jrrpaasr/~07cp)
+
+* Challenge 1
+```js
+<script setup>
+  /*
+CHALLENGE: Create a Ref to house "https://vuejs.org/"
+           and bind the Ref to our anchor tag's href attribute.
+           Use shorthands if you want/can!
+*/
+import {ref} from 'vue'
+const href = ref("https://vuejs.org/")
+</script>
+```
+```html
+<template>
+  <footer>
+      <p>Learn more about me at <a target="_blank" :href>vuejs.org</a></p>
+  </footer>
+</template>
+```
+
+* Reactive array
+```js
+<script setup>
+/*
+CHALLENGE: Create a reactive array of objects to house the Vue facts
+TIP: Each object might have a an "adjective" property and "description" property
+*/
+
+import {ref} from 'vue'
+const facts = ref([
+  {
+    "adjective": "Lightweight",
+    "description": "I am incredibly small and fast! My core library is only around 30KB, so I won't slow you down."
+  },
+  {
+    "adjective": "Approachable",
+    "description": "Easy to learn and use, even for beginners. I have a gentle learning curve, clear documentation, and a supportive community."
+  },
+  {
+    "adjective": "Versatile",
+    "description": "I can handle everything from simple interactive elements to complex single-page applications. I'm great for small projects and large-scale applications alike."
+  },
+])
+/*
+CHALLENGE: Bind the data from the `facts` Ref to elements in the template
+*/
+</script>
+```
+```html
+<template>
+  <main>
+      <section>
+          <h2>
+              I'm <span class="highlight">Lightweight</span>
+          </h2>
+          <p>
+              I am incredibly small and fast! My core library is only around 30KB, so I won't slow you down.
+          </p>
+      </section>
+      <section>
+          <h2>
+              I'm <span class="highlight">Approachable</span>
+          </h2>
+          <p>
+              Easy to learn and use, even for beginners. I have a gentle learning curve, clear documentation, and a supportive community.
+          </p>
+      </section>
+      <section>
+          <h2>
+          I'm <span class="highlight">Versatile</span>
+          </h2>
+          <p>
+              I can handle everything from simple interactive elements to complex single-page applications. I'm great for small projects and large-scale applications alike.
+          </p>
+      </section>
+  </main>
+</template>
+```
 
 <!--
 * Links you used today (websites, videos, etc)
