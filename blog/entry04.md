@@ -46,7 +46,7 @@ Here's a progress check of my MVP so far:
 </div>
 ```
 
-img
+<img width="1355" height="592" alt="Screenshot 2026-03-12 3 15 05 PM" src="https://github.com/user-attachments/assets/63af5afa-4b5f-4eeb-bfab-60e92799d971" />
 
 ### Enginnering Design Process
 
