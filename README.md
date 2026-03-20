@@ -1,38 +1,34 @@
-# tool/temporary
+# SEP11 Freedom Project
+by **Jolee Liu**
 
-This template should help get you started developing with Vue 3 in Vite.
+## Context
+I am a student at [HSTAT](https://www.hstat.org/) in the [Software Engineering Program](https://hstatsep.github.io/). The "Freedom Project" for SEP11 is a year-long project all about making something using JavaScript along with a third-party JS tool.
 
-## Recommended IDE Setup
+For my project, I chose to independently study **X** in order to help me make **X**.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Links
 
-## Recommended Browser Setup
+[Product]()
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+[Presentation]()
 
-## Customize configuration
+## Implications
+##### PROS
+*
+##### CONS
+*
 
-See [Vite Configuration Reference](https://vite.dev/config/).
 
-## Project Setup
+## Blog
+Below you will find my blog about how I made my project.
 
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+* [Entry 1](blog/entry01.md)
+* [Entry 2](blog/entry02.md)
+* [Entry 3](blog/entry03.md)
+* [Entry 4](blog/entry04.md)
+* [Entry 5](blog/entry05.md)
+* [Entry 6](blog/entry06.md)
+* [Entry 7](blog/entry07.md)
+* [Entry 8](blog/entry08.md)
+* [Entry 9](blog/entry09.md)
+* [Entry 10](blog/entry10.md)
