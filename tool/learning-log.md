@@ -933,6 +933,146 @@ CHALLENGE: Bind the data from the `facts` Ref to elements in the template
 </template>
 ```
 
+### 3/16/26 - Progress check and more Vue
+Progress check
+
+In order to use Vue, I moved a temporary Vue file I already made up so that I could use it for my main `index.html` file instead. (This is so I wouldn't have had to use a CDN.)
+
+Then, with the old Navbar I made originally, I moved my original code into a `Navbar.vue` component like so:
+
+```html
+<template>
+    <nav class="navbar fixed-top bg-body-tertiary navbar-expand-lg" data-bs-theme="dark">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Calculus study mini-game</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="https://www.desmos.com/calculator" target="_blank">Calculator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#help">Need help?</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</template>
+```
+
+And I moved all of my CSS into `main.css` so I could use it globally.
+ ```css
+    .text-light{
+    color:#F2F3F1;
+}
+.text-dark{
+    color: #1C1921;
+}
+.suva-gray {
+    color: #838183 !important;
+}
+.oslo-gray {
+    color: #cad9d0 !important
+}
+.container {
+    padding: 150px 0px 30px 300px;
+    margin: auto;
+}
+#questionaire {
+    margin: auto;
+    text-align: center;
+    padding: 30px 0px 100px 0px;
+}
+input {
+    color: #F2F3F1;
+}
+```
+
+Of course, I made sure to import both Vue component files in `App.vue`
+```js
+<script setup>
+import Navbar from '@/components/Navbar.vue'
+import Main from '@/components/Main.vue'
+</script>
+```
+
+Additionally, I made a reactive array to hold all of the questions (10), and will allow for the indexes to change later.
+```js
+<script setup>
+    import {ref} from 'vue'
+    const questionaire = ref([
+    {
+        "question": "What's the angle at 3π/4?",
+        choices: ["175°","150°","135°","120°"]
+    },
+    {
+        "question": "What's the angle jump at every π/4th of a jump?",
+        choices: ["45°","25°","30°","60°"]
+    },
+    {
+        "question": "What are the coordinates of 11π/6?",
+        choices: ["(√3/2, -1/2)","(√3/2, 1/2)","(√2/2, -√2/2)","(√2/2, √2/2)"]
+    },
+    {
+        "question": "What's the angle at 7π/6?",
+        choices: ["240°","210°","180°","225°"]
+    },
+    {
+        "question": "What's the angle jump at every π/6th?",
+        choices: ["30°","60°","90°","15°"]
+    },
+    {
+        "question": "What's the angle jump at every π/2th?",
+        choices: ["30°","60°","90°","15°"]
+    },
+    {
+        "question": "What's the angle jump at every π/3th?",
+        choices: ["30°","60°","90°","15°"]
+    },
+    {
+        "question": "What are the coordinates of 5π/4?",
+        choices: ["(-√3/2, -1/2)","(√3/2, 1/2)","(-√2/2, -√2/2)","(√2/2, √2/2)"]
+    },
+    {
+        "question": "What are the coordinates of 2π/3?",
+        choices: ["(1/2, √3/2)","(-1/2, √3/2)","(-√2/2, √2/2)","(√2/2, √2/2)"]
+    },
+    {
+        "question": "What's the angle at 5π/3?",
+        choices: ["270°","330°","300°","315°"]
+    },
+    ])
+</script>
+```
+
+```html
+<template>
+    <div class="container-fluid">
+        <div class="container" id="#questionaire">
+        <h2 class="text-dark">{{questionaire[0].question}}</h2>
+        <input type="radio" name="mcq" value="1" id="Option1"> {{questionaire[0].choices[0]}} <br>
+        <input type="radio" name="mcq" value="2" id="Option2"> {{questionaire[0].choices[1]}} <br>
+        <input type="radio" name="mcq" value="3" id="Option3"> {{questionaire[0].choices[2]}} <br>
+        <input type="radio" name="mcq" value="4" id="Option4"> {{questionaire[0].choices[3]}} <br>
+        <!-- Each one has the same TYPE and NAME, so that the user can only select ONE option -->
+
+        <br>
+        <button>Submit</button>
+        <br>
+        <p></p>
+        </div>
+    </div>
+</template>
+```
+
+Used [Official Vue documentation](https://vuejs.org/guide/essentials/class-and-style.html)
+
+* Using `v-bind`, shorten `v-bind:class` to `:class`
+    * To dynamically toggle classes.    
+
 <!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc

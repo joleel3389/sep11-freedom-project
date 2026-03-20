@@ -1,0 +1,63 @@
+@import './base.css';
+
+/* #app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+} */
+/* body {
+    background-color: #1C1921;
+} */
+ 
+.text-light{
+    color:#F2F3F1;
+}
+.text-dark{
+    color: #1C1921;
+}
+.suva-gray {
+    color: #838183 !important;
+}
+.oslo-gray {
+    color: #cad9d0 !important
+}
+.container {
+    padding: 150px 0px 30px 300px;
+    margin: auto;
+}
+#questionaire {
+    margin: auto;
+    text-align: center;
+    padding: 30px 0px 100px 0px;
+}
+input {
+    color: #F2F3F1;
+}
