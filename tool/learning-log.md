@@ -1068,10 +1068,15 @@ Additionally, I made a reactive array to hold all of the questions (10), and wil
 </template>
 ```
 
+Current state of my project:
+<img width="1666" height="920" alt="2026-03-20 16_32_34-Window" src="https://github.com/user-attachments/assets/07fa0b3b-5d64-4739-bbca-d523934d77ad" />
+
 Used [Official Vue documentation](https://vuejs.org/guide/essentials/class-and-style.html)
 
 * Using `v-bind`, shorten `v-bind:class` to `:class`
     * To dynamically toggle classes.    
+
+### x/x/x - 
 
 <!--
 * Links you used today (websites, videos, etc)
