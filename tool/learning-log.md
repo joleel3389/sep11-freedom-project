@@ -1076,7 +1076,139 @@ Used [Official Vue documentation](https://vuejs.org/guide/essentials/class-and-s
 * Using `v-bind`, shorten `v-bind:class` to `:class`
     * To dynamically toggle classes.    
 
-### x/x/x - 
+### 3/23/26 - Learning more Vue and progress check
+Used [Official Vue documentation](https://vuejs.org/guide/essentials/conditional.html)
+
+* Use `v-if` to check that if the value is true, then allow the block to render.
+    * Ex. `v-if="yes"`, then the block it's associated with will activate. 
+* Use `v-else` if the value is not true, then this block will render instead. 
+    * MUST follow a `v-if` or `v-else-if` prior to it.
+* Use `v-else-if` to check that if an ADDITIONAL value is true, then allow the block to render.
+    * MUST follow a `v-if` or another `v-else-if` prior to it. 
+
+Learned how `v-if` (conditional rendering) can apply to elements.
+
+Used [Official Vue documentation](https://vuejs.org/guide/essentials/forms.html#radio)
+
+* `v-model` can be used on different input types
+    * For my case, radio buttons, it can be used to determine which radio button was selected
+    * Ex. 
+    ```html
+    <div>Picked: {{ picked }}</div>
+
+    <input type="radio" id="one" value="One" v-model="picked" />
+    <label for="one">One</label>
+
+    <input type="radio" id="two" value="Two" v-model="picked" />
+    <label for="two">Two</label>
+    ```
+
+**Progress check:**
+* I made new reactive variables in order to determine whether the user's choice was correct or wrong.
+* To check whether the user's choice was actually the right answer, I used a function with an if statement to see if the user's choice matched the correct answer I defined with each question.
+    * If the correct answer matched, then `correct` would be set to true, and it'll progress to the next question. I also allowed for a `v-if` statement that would toggle if `correct` was true, indicating the correct answer was chosen.
+    * If the correct answer didn't match, `correct` is set to false and `wrong` is set to true, not progressing to the next question, and with `v-else-if` I enabled text that indicated the wrong answer was chosen.
+* I used `v-model` to track the user's choice
+* I used the `@click` event handler to run the `checkAnswer()` function whenever the user tried to submit their answer.
+
+JavaScript portion:
+```js
+<script setup>
+    const questionNumber = ref(0);
+    const userChoice = ref();
+    const correct = ref(false);
+    const wrong = ref(false);
+
+    function checkAnswer(){
+        if(userChoice.value === questionaire.value[questionNumber.value].correct){
+            correct.value = true;
+            wrong.value = false;
+            questionNumber.value++;
+        } else {
+            wrong.value = true;
+            correct.value = false;
+        }
+    }
+    
+    import {ref} from 'vue'
+    const questionaire = ref([
+        {
+            "question": "What's the angle at 3π/4?",
+            choices: ["175°","150°","135°","120°"],
+            correct: "135°"
+        },
+        {
+            "question": "What's the angle jump at every π/4th of a jump?",
+            choices: ["45°","25°","30°","60°"],
+            correct: "45°"
+        },
+        {
+            "question": "What are the coordinates of 11π/6?",
+            choices: ["(√3/2, -1/2)","(√3/2, 1/2)","(√2/2, -√2/2)","(√2/2, √2/2)"],
+            correct: "(√3/2, -1/2)"
+        },
+        {
+            "question": "What's the angle at 7π/6?",
+            choices: ["240°","210°","180°","225°"],
+            correct: "210°"
+        },
+        {
+            "question": "What's the angle jump at every π/6th?",
+            choices: ["30°","60°","90°","15°"],
+            correct: "30°"
+        },
+        {
+            "question": "What's the angle jump at every π/2th?",
+            choices: ["30°","60°","90°","15°"],
+            correct: "90°"
+        },
+        {
+            "question": "What's the angle jump at every π/3th?",
+            choices: ["30°","60°","90°","15°"],
+            correct: "60°"
+        },
+        {
+            "question": "What are the coordinates of 5π/4?",
+            choices: ["(-√3/2, -1/2)","(√3/2, 1/2)","(-√2/2, -√2/2)","(√2/2, √2/2)"],
+            correct: "(-√2/2, -√2/2)"
+        },
+        {
+            "question": "What are the coordinates of 2π/3?",
+            choices: ["(1/2, √3/2)","(-1/2, √3/2)","(-√2/2, √2/2)","(√2/2, √2/2)"],
+            correct: "(-1/2, √3/2)"
+        },
+        {
+            "question": "What's the angle at 5π/3?",
+            choices: ["270°","330°","300°","315°"],
+            correct: "300°"
+        },
+    ])
+</script>
+```
+
+HTML portion:
+```html
+<template>
+    <div class="container-fluid">
+        <div class="container" id="#questionaire">
+        <h2 class="text-dark">{{questionaire[questionNumber].question}}</h2>
+        <input type="radio" name="mcq" :value="questionaire[questionNumber].choices[0]" id="Option1" v-model="userChoice"> {{questionaire[questionNumber].choices[0]}} <br>
+        <input type="radio" name="mcq" :value="questionaire[questionNumber].choices[1]" id="Option2" v-model="userChoice"> {{questionaire[questionNumber].choices[1]}} <br>
+        <input type="radio" name="mcq" :value="questionaire[questionNumber].choices[2]" id="Option3" v-model="userChoice"> {{questionaire[questionNumber].choices[2]}} <br>
+        <input type="radio" name="mcq" :value="questionaire[questionNumber].choices[3]" id="Option4" v-model="userChoice"> {{questionaire[questionNumber].choices[3]}} <br>
+        <!-- Each one has the same TYPE and NAME, so that the user can only select ONE option -->
+
+        <br>
+        <button class="btn btn-secondary" @click="checkAnswer()">Submit</button>
+        <br>
+        <p v-if="correct">Correct!</p>
+        <p v-else-if="wrong">Incorrect! Try again.</p>
+        </div>
+    </div>
+</template>
+```
+
+
 
 <!--
 * Links you used today (websites, videos, etc)
