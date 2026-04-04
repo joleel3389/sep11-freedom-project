@@ -26,7 +26,7 @@
     - [X] Reactive elements (apart of vue)
     - [X] Make key components (header.vue, etc.)
   - [X] Utilize conditionals to check correct answers (deadline: 3/30/26)
-  - [ ] Have a score counter (deadline: 4/3/26)
+  - [X] Have a score counter (deadline: 4/3/26)
   - [ ] Allow the user to play again with a possible button (deadline: 4/6/26)
 
 #### Beyond MVP
@@ -35,6 +35,7 @@
 - [ ] Make multiple sets
   - [ ] Maybe derivative rules(?)
 - [ ] Add a timer that can function
+- [ ] Try to make the options shuffle?
 
 <!-- EXAMPLE
 

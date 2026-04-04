@@ -2,17 +2,29 @@
     const questionNumber = ref(0);
     const userChoice = ref();
     const correct = ref(false);
-    const wrong = ref(false);
+    const done= ref(false);
+    const score = ref(0);
 
     function checkAnswer(){
         if(userChoice.value === questionaire.value[questionNumber.value].correct){
-        correct.value = true;
-        wrong.value = false;
-        questionNumber.value++;
+            correct.value = true;
+            score.value++;
+            questionNumber.value++;
+            userChoice.value = undefined;
+            if(questionNumber.value === 10){
+                done.value = true;
+            }
         } else {
-        wrong.value = true;
-        correct.value = false;
+            correct.value = false;
         }
+    }
+
+    function refresh(){
+        questionNumber.value = 0;
+        score.value = 0;
+        correct.value = false;
+        userChoice.value = undefined;
+        done.value = false;
     }
     
     import {ref} from 'vue'
@@ -29,7 +41,7 @@
     },
     {
         "question": "What are the coordinates of 11π/6?",
-        choices: ["(√3/2, -1/2)","(√3/2, 1/2)","(√2/2, -√2/2)","(√2/2, √2/2)"],
+        choices: ["(√3/2, 1/2)","(√3/2, -1/2)","(√2/2, -√2/2)","(√2/2, √2/2)"],
         correct: "(√3/2, -1/2)"
     },
     {
@@ -71,21 +83,24 @@
 </script>
 
 <template>
-    <div class="container-fluid">
-        <div class="container" id="#questionaire">
-        <h2 class="text-dark">{{questionaire[questionNumber].question}}</h2>
-        <input type="radio" name="mcq" :value="questionaire[questionNumber].choices[0]" id="Option1" v-model="userChoice"> {{questionaire[questionNumber].choices[0]}} <br>
-        <input type="radio" name="mcq" :value="questionaire[questionNumber].choices[1]" id="Option2" v-model="userChoice"> {{questionaire[questionNumber].choices[1]}} <br>
-        <input type="radio" name="mcq" :value="questionaire[questionNumber].choices[2]" id="Option3" v-model="userChoice"> {{questionaire[questionNumber].choices[2]}} <br>
-        <input type="radio" name="mcq" :value="questionaire[questionNumber].choices[3]" id="Option4" v-model="userChoice"> {{questionaire[questionNumber].choices[3]}} <br>
-        <!-- Each one has the same TYPE and NAME, so that the user can only select ONE option -->
+    <div class="container-fluid" id="unitCircle">
+        <div class="container" id="questionaire" v-if="!done">
+            <h4 class="text-dark">{{questionaire[questionNumber].question}}</h4>
+            <div id="bulletPoints">
+                <input type="radio" name="mcq" :value="questionaire[questionNumber].choices[0]" id="Option1" v-model="userChoice"> {{questionaire[questionNumber].choices[0]}} <br>
+                <input type="radio" name="mcq" :value="questionaire[questionNumber].choices[1]" id="Option2" v-model="userChoice"> {{questionaire[questionNumber].choices[1]}} <br>
+                <input type="radio" name="mcq" :value="questionaire[questionNumber].choices[2]" id="Option3" v-model="userChoice"> {{questionaire[questionNumber].choices[2]}} <br>
+                <input type="radio" name="mcq" :value="questionaire[questionNumber].choices[3]" id="Option4" v-model="userChoice"> {{questionaire[questionNumber].choices[3]}} <br>
+                <!-- Each one has the same TYPE and NAME, so that the user can only select ONE option -->
+            </div>
 
-        <br>
-        <button class="btn btn-secondary" @click="checkAnswer()">Submit</button>
-        <br>
-        <p v-if="correct">Correct!</p>
-        <p v-else-if="wrong">Incorrect! Try again.</p>
+            <br>
+            <button class="btn btn-secondary" @click="checkAnswer()">Submit</button>
+            <br>
+            <p v-if="correct">Correct! Score: {{score}}</p>
+            <p v-else-if="!correct">Incorrect! Try again. Score: {{score}}</p>
         </div>
+        <button class="btn btn-secondary" v-if="done" @click="refresh()">Play again?</button>
     </div>
 </template>
 
