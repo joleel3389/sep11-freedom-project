@@ -2,12 +2,14 @@
     const questionNumber = ref(0);
     const userChoice = ref();
     const correct = ref(false);
+    const wrong = ref(false);
     const done= ref(false);
     const score = ref(0);
 
     function checkAnswer(){
         if(userChoice.value === questionaire.value[questionNumber.value].correct){
             correct.value = true;
+            wrong.value = false;
             score.value++;
             questionNumber.value++;
             userChoice.value = undefined;
@@ -16,6 +18,7 @@
             }
         } else {
             correct.value = false;
+            wrong.value = true;
         }
     }
 
@@ -23,6 +26,7 @@
         questionNumber.value = 0;
         score.value = 0;
         correct.value = false;
+        wrong.value = false;
         userChoice.value = undefined;
         done.value = false;
     }
@@ -83,10 +87,14 @@
 </script>
 
 <template>
+    <div class="container-fluid" id="score">
+        <p class="text-light-dark left baloo-2-regular">Score: {{score}}</p>
+        <p class="text-light-dark right baloo-2-regular">{{questionNumber}}/10</p>
+    </div>
     <div class="container-fluid" id="unitCircle">
         <div class="container" id="questionaire" v-if="!done">
-            <h4 class="text-dark">{{questionaire[questionNumber].question}}</h4>
-            <div id="bulletPoints">
+            <h4 class="text-dark baloo-2-regular">{{questionaire[questionNumber].question}}</h4>
+            <div class="baloo-2-regular" id="bulletPoints">
                 <input type="radio" name="mcq" :value="questionaire[questionNumber].choices[0]" id="Option1" v-model="userChoice"> {{questionaire[questionNumber].choices[0]}} <br>
                 <input type="radio" name="mcq" :value="questionaire[questionNumber].choices[1]" id="Option2" v-model="userChoice"> {{questionaire[questionNumber].choices[1]}} <br>
                 <input type="radio" name="mcq" :value="questionaire[questionNumber].choices[2]" id="Option3" v-model="userChoice"> {{questionaire[questionNumber].choices[2]}} <br>
@@ -95,12 +103,12 @@
             </div>
 
             <br>
-            <button class="btn btn-secondary" @click="checkAnswer()">Submit</button>
+            <button class="btn text-dark" @click="checkAnswer()">Submit</button>
             <br>
-            <p v-if="correct">Correct! Score: {{score}}</p>
-            <p v-else-if="!correct">Incorrect! Try again. Score: {{score}}</p>
+            <p v-if="correct">Correct!</p>
+            <p v-else-if="wrong">Incorrect! Try again.</p>
         </div>
-        <button class="btn btn-secondary" v-if="done" @click="refresh()">Play again?</button>
+        <button class="btn text-dark" v-if="done" @click="refresh()">Play again?</button>
     </div>
 </template>
 
