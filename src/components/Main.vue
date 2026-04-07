@@ -3,8 +3,15 @@
     const userChoice = ref();
     const correct = ref(false);
     const wrong = ref(false);
+    const play = ref(false);
     const done= ref(false);
     const score = ref(0);
+
+    // after set time set the value of correct & wrong back to false for the css transition animation
+    setTimeout(() => {
+        correct.value = false
+        wrong.value = false
+    }, 800)
 
     function checkAnswer(){
         if(userChoice.value === questionaire.value[questionNumber.value].correct){
@@ -29,6 +36,21 @@
         wrong.value = false;
         userChoice.value = undefined;
         done.value = false;
+    }
+    
+    function home(){
+        questionNumber.value = 0;
+        score.value = 0;
+        correct.value = false;
+        wrong.value = false;
+        userChoice.value = undefined;
+        done.value = false;
+
+        play.value = false;
+    }
+
+    function unitCircle(){
+        play.value = true;
     }
     
     import {ref} from 'vue'
@@ -87,13 +109,18 @@
 </script>
 
 <template>
-    <div class="container-fluid" id="score">
+    <div class="container-fluid" id="home" v-if="!play">
+        <img src="/hachi-nerd-sprite.png" alt="NERDY hachiware" class="icon">
+        <p class="text-light-dark center baloo-2-regular">Choose your deck:</p>
+        <button class="btn text-dark center poppins-regular" @click="unitCircle()">Unit circle</button>
+    </div>
+    <div class="container-fluid" id="score" v-if="play">
         <p class="text-light-dark left baloo-2-regular">Score: {{score}}</p>
         <p class="text-light-dark right baloo-2-regular">{{questionNumber}}/10</p>
     </div>
-    <div class="container-fluid" id="unitCircle">
-        <div class="container" id="questionaire" v-if="!done">
-            <h4 class="text-dark baloo-2-regular">{{questionaire[questionNumber].question}}</h4>
+    <div class="container-fluid" id="unitCircle" v-if="!done && play">
+        <div class="container" id="questionaire">
+            <h2 class="text-dark baloo-2-regular">{{questionaire[questionNumber].question}}</h2>
             <div class="baloo-2-regular" id="bulletPoints">
                 <input type="radio" name="mcq" :value="questionaire[questionNumber].choices[0]" id="Option1" v-model="userChoice"> {{questionaire[questionNumber].choices[0]}} <br>
                 <input type="radio" name="mcq" :value="questionaire[questionNumber].choices[1]" id="Option2" v-model="userChoice"> {{questionaire[questionNumber].choices[1]}} <br>
@@ -102,13 +129,22 @@
                 <!-- Each one has the same TYPE and NAME, so that the user can only select ONE option -->
             </div>
 
-            <br>
-            <button class="btn text-dark" @click="checkAnswer()">Submit</button>
-            <br>
-            <p v-if="correct">Correct!</p>
-            <p v-else-if="wrong">Incorrect! Try again.</p>
+            <button class="btn text-dark poppins-regular" @click="checkAnswer()">Submit</button>
+            <Transition name="thumbs-up">
+                <img src="/hachi-cheer-sprite.png" alt="placeholder hachiware" class="icon" v-if="correct" :key="questionNumber">
+            </Transition>
+            <Transition name="thumbs-down">
+                <img src="/hachi-nerd-sprite.png" alt="placeholder hachiware" class="icon" v-if="wrong" :key="questionNumber">
+            </Transition>
         </div>
-        <button class="btn text-dark" v-if="done" @click="refresh()">Play again?</button>
+    </div>
+    <div class="container-fluid" id="complete" v-if="done && play">
+        <img src="/hachi-cheer-sprite.png" alt="cheerleader hachiware" class="icon">
+        <p class="text-light-dark center baloo-2-regular">Deck complete!</p>
+        <div>
+        <button class="btn text-dark center poppins-regular" @click="home()">Home</button>
+        <button class="btn text-dark center poppins-regular" @click="refresh()">Play again?</button>
+        </div>
     </div>
 </template>
 
