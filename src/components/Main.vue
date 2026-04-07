@@ -7,12 +7,6 @@
     const done= ref(false);
     const score = ref(0);
 
-    // after set time set the value of correct & wrong back to false for the css transition animation
-    setTimeout(() => {
-        correct.value = false
-        wrong.value = false
-    }, 800)
-
     function checkAnswer(){
         if(userChoice.value === questionaire.value[questionNumber.value].correct){
             correct.value = true;
@@ -20,12 +14,20 @@
             score.value++;
             questionNumber.value++;
             userChoice.value = undefined;
+            // after set time set the value of correct & wrong back to false for the css transition animation
+            setTimeout(() => {
+                correct.value = false
+            }, 900)
             if(questionNumber.value === 10){
                 done.value = true;
             }
         } else {
             correct.value = false;
             wrong.value = true;
+            // after set time set the value of correct & wrong back to false for the css transition animation
+            setTimeout(() => {
+                wrong.value = false
+            }, 900)
         }
     }
 
