@@ -17,7 +17,7 @@
   - [X] connect the prompts with an answer on the same list (deadline: 2/23/26)
   - [X] Use MCQ with the list with  4 options each (deadline : 2/23/26)
   - [The list](https://docs.google.com/document/d/14Hs1sqlnrC-T0Maj2uqyXInnc_HNusOyr9SurLk3zgw/edit?usp=sharing)
-- [ ] Building the website
+- [X] Building the website
   - [X] Start with the HTML (deadline: 3/16/26)
     - [X] Questions (using HTML tags like headers, p)
     - [X] Radio buttons (radio)
@@ -27,7 +27,7 @@
     - [X] Make key components (header.vue, etc.)
   - [X] Utilize conditionals to check correct answers (deadline: 3/30/26)
   - [X] Have a score counter (deadline: 4/3/26)
-  - [ ] Allow the user to play again with a possible button (deadline: 4/6/26)
+  - [X] Allow the user to play again with a possible button (deadline: 4/6/26)
 
 #### Beyond MVP
 
