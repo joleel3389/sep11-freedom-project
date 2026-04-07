@@ -1209,7 +1209,12 @@ HTML portion:
 ```
 
 ### 3/30/26 - Extra
-
+* [:key info](https://vuejs.org/api/built-in-special-attributes.html#key)
+* [v-model](https://vuejs.org/guide/components/v-model.html#component-v-model)
+* [Vue.js Transition](https://vuejs.org/guide/built-ins/transition.html)
+* [setTimeout JS](https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout#working_with_asynchronous_functions)
+* [CSS transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions/Using#using_transitions_to_make_javascript_functionality_smooth) -> transform
+* [.sort() JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
 <!--
 * Links you used today (websites, videos, etc)
