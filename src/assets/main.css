@@ -35,7 +35,7 @@ a,
 } */
 body {
     background-color: #f9f9f9ff;
-    padding: 180px;
+    padding: 180px 180px 0px 180px;
 }
 .bg-body-blue{
   background-color: #91d1dcff;
@@ -196,4 +196,88 @@ input {
 .correct-enter-from, .correct-leave-to, .wrong-enter-from, .wrong-leave-to {
   opacity: 0;
   transform: translateY(20px);
+}
+
+@media (max-width: 990px){
+  body {
+    background-color: #f9f9f9ff;
+    padding: 180px 100px 0px 100px;
+  }
+  #unitCircle{
+    /* width: 100%; */
+    padding: 40px 0px 50px 30px;
+  }
+}
+@media (max-width: 760px){
+  body{
+    padding: 170px 30px 0px 30px;
+  }
+  .bg-body-blue{
+    background-color: #91d1dcff;
+    padding:12px 5px 12px 5px;
+  }
+  #score{
+    margin-bottom: 35px;
+  }
+  #home{
+    width:100%;
+    padding: 100px 0px 110px 0px;
+  }
+  #complete{
+    width:100%;
+    padding: 100px 0px 110px 0px;
+  }
+  #unitCircle{
+    width: 100%;
+    padding: 50px 0px 60px 30px;
+  }
+  #questionaire img {
+    top: 8%;
+  }
+}
+@media (max-width: 630px){
+  #unitCircle{
+    width: 100%;
+    padding: 40px 0px 50px 10px;
+  }
+}
+@media (max-width: 432px){
+  body{
+    padding: 150px 20px 0px 20px;
+  }
+  .h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  .nav-link{
+    font-size: 15px;
+  }
+  .bg-body-blue{
+    background-color: #91d1dcff;
+    padding:10px 5px 8px 5px;
+  }
+  #score{
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  #home{
+    width:100%;
+    padding: 90px 0px 100px 0px;
+  }
+  #complete{
+    width:100%;
+    padding: 90px 0px 100px 0px;
+  }
+  #unitCircle{
+    width: 100%;
+    padding: 40px 0px 50px 14px;
+  }
+  #bulletPoints{
+    font-size: 20px;
+  }
+  #questionaire img {
+    top: 79%;
+  }
 }
