@@ -7,6 +7,8 @@
     const done= ref(false);
     const score = ref(0);
 
+    
+
     function checkAnswer(){
         if(userChoice.value === questionaire.value[questionNumber.value].correct){
             correct.value = true;
@@ -132,11 +134,11 @@
             </div>
 
             <button class="btn text-dark poppins-regular" @click="checkAnswer()">Submit</button>
-            <Transition name="thumbs-up">
-                <img src="/hachi-cheer-sprite.png" alt="placeholder hachiware" class="icon" v-if="correct" :key="questionNumber">
+            <Transition name="correct">
+                <img src="/hachi-cheeky-sprite.png" alt="cheeky hachiware" class="icon" v-if="correct" :key="questionNumber">
             </Transition>
-            <Transition name="thumbs-down">
-                <img src="/hachi-nerd-sprite.png" alt="placeholder hachiware" class="icon" v-if="wrong" :key="questionNumber">
+            <Transition name="wrong">
+                <img src="/hachi-sad-sprite.png" alt="sad hachiware" class="icon" v-if="wrong" :key="questionNumber">
             </Transition>
         </div>
     </div>
