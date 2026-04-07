@@ -3,11 +3,11 @@
     const userChoice = ref();
     const correct = ref(false);
     const wrong = ref(false);
-    const play = ref(false);
     const done= ref(false);
     const score = ref(0);
 
-    
+    const play = ref(false);
+    const setCircle = ref(false);
 
     function checkAnswer(){
         if(userChoice.value === questionaire.value[questionNumber.value].correct){
@@ -51,10 +51,13 @@
         done.value = false;
 
         play.value = false;
+
+        setCircle.value = false;
     }
 
     function unitCircle(){
         play.value = true;
+        setCircle.value = true;
     }
     
     import {ref} from 'vue'
@@ -110,6 +113,12 @@
         correct: "300°"
     },
     ])
+
+    questionaire.value.forEach(function(q){
+        // randomize choices using .sort() but instead of comparing actual values, use random
+        q.choices.sort(() => Math.random() - 0.5)
+        // 5050 chance to get a negative number, hence subtraction
+    });
 </script>
 
 <template>
@@ -122,7 +131,7 @@
         <p class="text-light-dark left baloo-2-regular">Score: {{score}}</p>
         <p class="text-light-dark right baloo-2-regular">{{questionNumber}}/10</p>
     </div>
-    <div class="container-fluid" id="unitCircle" v-if="!done && play">
+    <div class="container-fluid" id="unitCircle" v-if="!done && play && setCircle">
         <div class="container" id="questionaire">
             <h2 class="text-dark baloo-2-regular">{{questionaire[questionNumber].question}}</h2>
             <div class="baloo-2-regular" id="bulletPoints">
