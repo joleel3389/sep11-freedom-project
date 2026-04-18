@@ -7,7 +7,7 @@
 
 To finish off the MVP of my project, I learned Vue.js concepts like `v-if`, `:key`, `v-model`, Vue transitions. Not regarding my tool, I looked over concepts like CSS transitions, JS `setTimeout()`, and JS `sort()`. The way I used all of these concepts varied.
 
-I used `v-if` in order to toggle most of the containers on my project, and also the transitions that trigger whether you got an answer wrong or right (which I'll discuss later). For example, here's the HTML portion of my code:
+I used `v-if` in order to toggle most of the containers on my project and also the transitions that trigger whether you got an answer wrong or right (which I'll discuss later). For example, here's the HTML portion of my code:
 
 ```html
 <template>
@@ -51,7 +51,7 @@ I used `v-if` in order to toggle most of the containers on my project, and also 
 </template>
 ```
 
-As you can see, certain containers will only be toggled if a certain variable is true. Take this specific container for example:
+As you can see, certain containers will only be toggled if a certain variable is true. Take this specific container, for example:
 
 ```html
 <div class="container-fluid" id="complete" v-if="done && play">
@@ -80,7 +80,7 @@ For `v-model`, I used it on the radio buttons for the actual questions, as shown
             </div>
 ```
 
-`v-model` can be used on multiple types of inputs, in which I choose to use it with radio buttons. What `v-model` helps do specifically is that it'll bind the `:value` of the chosen radio button and store it to my ref variable `userChoice`. This is especially useful for my `checkAnswer` function as seen here:
+`v-model` can be used on multiple types of inputs, in that I choose to use it with radio buttons. What `v-model` helps do specifically is that it'll bind the `:value` of the chosen radio button and store it to my ref variable `userChoice`. This is especially useful for my `checkAnswer` function as seen here:
 
 ```js
 function checkAnswer(){
@@ -202,7 +202,7 @@ setTimeout(function(){
 }, 900);
 ```
 
-There's another version of this whenever `wrong.value = true`, but in this case, when the user gets a question right, then after 900 miliseconds, `correct` will be set back to false until it becomes true again (through other means). This allows the animation to only play for a set amount of time, as it will hide after. `:key="questionNumber` is also incorporated here, in which it allows the animation to replay per question. So when the question number changes, the animation still works.
+There's another version of this whenever `wrong.value = true`, but in this case, when the user gets a question right, then after 900 milliseconds, `correct` will be set back to false until it becomes true again (through other means). This allows the animation to only play for a set amount of time, as it will hide after. `:key="questionNumber` is also incorporated here, in which it allows the animation to replay per question. So when the question number changes, the animation still works.
 
 Here is a demonstration of both sprite animations:
 
@@ -230,7 +230,7 @@ Of course, everything comes together in the full version of my [SEP11 freedom pr
 
 ---
 
-In my previous blog, I was on step 4 of the Engineering Design Process (EDP). Now, I'm on the 5th and 6th step of EDP, which are to create a prototype as well as to test and evaluate the prototype. I've finished creating the MVP of my project, and I tested that my website was fully functioning. I applied many of the Vue.js concepts I wanted to from my 4th blog, like `vue-if`, `v-model`, and more. By my next blog, hopefully I can move onto beyond MVP with step 7: to improve as needed.
+In my previous blog, I was on step 4 of the Engineering Design Process (EDP). Now, I'm on the 5th and 6th steps of EDP, which are to create a prototype as well as to test and evaluate the prototype. I've finished creating the MVP of my project, and I tested that my website was fully functioning. I applied many of the Vue.js concepts I wanted to from my 4th blog, like `vue-if`, `v-model`, and more. By my next blog, hopefully I can move on to beyond MVP with step 7: to improve as needed.
 
 ### Skills
 
@@ -238,15 +238,15 @@ In my previous blog, I was on step 4 of the Engineering Design Process (EDP). No
 
 Below are the skills I've learned while working on my blog.
 * How to read
-    * For my tool Vue.js, there were specific concepts I wanted to know after my last blog, but I couldn't find those concepts on [Scrimba](https://scrimba.com/) (the website with interactive videos that I used to learn Vue.js in the beginning). So, I decided to go to the official Vue.js documentation instead, to see how some concepts I used on my site like `v-if`, `v-model`, `:key` or Vue transitions. Not only for Vue, but I also used some documentations to review CSS transitions and JS concepts I haven't learned. Even though there was no practice to go with the documentations like I did in my videos, I was still able to analyze and observe how the concepts were being used, and also visualize in my head how I would use them.
+    * For my tool Vue.js, there were specific concepts I wanted to know after my last blog, but I couldn't find those concepts on [Scrimba](https://scrimba.com/) (the website with interactive videos that I used to learn Vue.js in the beginning). So, I decided to go to the official Vue.js documentation instead to see how some concepts I used on my site like `v-if`, `v-model`, `:key` or Vue transitions. Not only for Vue, but I also used some documentations to review CSS transitions and JS concepts I haven't learned. Even though there was no practice to go with the documentations like I did in my videos, I was still able to analyze and observe how the concepts were being used and also visualize in my head how I would use them.
 * Creativity
-    * For my project, I also had to consider the design of the website. I wanted to ensure my code was functioning first, so for my MVP I planned the design last. When I was planning the design for my project, I ensured that it wasn't too flashy to take away from the studying element, but that it was cute and casual in a way it'll still catch your attention. I used hachiware—a favorite character of mine—to help make the website appealing, and I'm really proud of the result.
+    * For my project, I also had to consider the design of the website. I wanted to ensure my code was functioning first, so for my MVP I planned the design last. When I was planning the design for my project, I ensured that it wasn't too flashy to take away from the studying element but that it was cute and casual in a way that it'll still catch your attention. I used hachiware—a favorite character of mine—to help make the website appealing, and I'm really proud of the result.
 
 ### Next steps
 
 ---
 
-For my next steps, I want to move onto step 7 of EDP, to improve as needed. If I have the time, I want to take it to work on my beyond MVP for greater optimization of my freedom project, such as more decks. 
+For my next steps, I want to move on to step 7 of EDP: to improve as needed. If I have the time, I want to take it to work on my beyond MVP for greater optimization of my freedom project, such as more decks. 
 
 [Previous](entry04.md) | [Next](entry06.md)
 
