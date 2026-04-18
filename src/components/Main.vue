@@ -10,26 +10,27 @@
     const setCircle = ref(false);
 
     function checkAnswer(){
+        // look into the array, then get the index for current question, then find the correct property
         if(userChoice.value === questionaire.value[questionNumber.value].correct){
             correct.value = true;
             wrong.value = false;
             score.value++;
             questionNumber.value++;
             userChoice.value = undefined;
-            // after set time set the value of correct & wrong back to false for the css transition animation
-            setTimeout(() => {
+            // after set time set the value of correct back to false for the css transition animation
+            setTimeout(function() {
                 correct.value = false
-            }, 900)
+            }, 900);
             if(questionNumber.value === 10){
                 done.value = true;
             }
         } else {
             correct.value = false;
             wrong.value = true;
-            // after set time set the value of correct & wrong back to false for the css transition animation
-            setTimeout(() => {
+            // after set time set the value of wrong back to false for the css transition animation
+            setTimeout(function() {
                 wrong.value = false
-            }, 900)
+            }, 900);
         }
     }
 
@@ -116,7 +117,9 @@
 
     questionaire.value.forEach(function(q){
         // randomize choices using .sort() but instead of comparing actual values, use random
-        q.choices.sort(() => Math.random() - 0.5)
+        q.choices.sort(function() {
+            return Math.random() - 0.5
+        });
         // 5050 chance to get a negative number, hence subtraction
     });
 </script>
