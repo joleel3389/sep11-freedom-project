@@ -206,7 +206,7 @@ There's another version of this whenever `wrong.value = true`, but in this case,
 
 Here is a demonstration of both sprite animations:
 
-placeholder
+<img width="800" height="495" alt="2026-04-1818-09-33-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/a9bd8c01-e770-4f91-aa61-39bbd4c40fce" />
 
 Lastly, I used `sort()` to help me randomize the position of the answer choices for each question. As seen below:
 
@@ -224,7 +224,7 @@ This will sort the different values of my choices property within my array of qu
 
 Of course, everything comes together in the full version of my [SEP11 freedom project](https://joleel3389.github.io/sep11-freedom-project/), which you can preview below or by the hidden link:
 
-placeholder
+<img width="800" height="480" alt="ezgif com-video-to-gif-converter (1)" src="https://github.com/user-attachments/assets/8cf3f602-d650-4813-9c43-4de1f9102ab2" />
 
 ### Engineering Design Process
 
