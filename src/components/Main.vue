@@ -27,6 +27,12 @@
         } else {
             correct.value = false;
             wrong.value = true;
+
+            score.value -= 0.5;
+            if(score.value < 0){
+                score.value = 0;
+            }
+            
             // after set time set the value of wrong back to false for the css transition animation
             setTimeout(function() {
                 wrong.value = false
