@@ -36,6 +36,9 @@
   - [ ] Maybe derivative rules(?)
 - [ ] Add a timer that can function
 - [X] Try to make the options shuffle?
+- [ ] feedback pop-up?
+- [ ] cosmetics from correctly answering?
+  - [ ] leaderboard?
 
 <!-- EXAMPLE
 
