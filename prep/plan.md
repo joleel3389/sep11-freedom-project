@@ -33,9 +33,12 @@
 
 - [ ] More than 10 questions
 - [ ] Make multiple sets
-  - [ ] Maybe derivative rules(?)
+  - [ ] Maybe derivative rules next(?)
 - [ ] Add a timer that can function
 - [X] Try to make the options shuffle?
+- [X] Add a penalty for every wrong answer
+- [ ] Try to give feedback
+- [ ] Add perks from getting a full score?
 
 <!-- EXAMPLE
 
