@@ -78,7 +78,7 @@
 
     function derivativesDeck(){
         play.value = true;
-        deckNumber.value = "derivatives"; // allows the check answer function to check strictly for the deck being used, in this case the unit circle.
+        deckNumber.value = "derivatives"; // allows the check answer function to check strictly for the deck being used, in this case derivatives.
 
         decks.value[deckNumber.value].questionaire.forEach(function(q){
         // randomize choices using .sort() but instead of comparing actual values, use random
@@ -226,7 +226,7 @@
         </div>
     </div>
 
-    <div class="container-fluid" id="complete" v-if="done && play"> // toggles only if the user finishes a deck (within play mode)
+    <div class="container-fluid" id="complete" v-if="done && play"> <!-- toggles only if the user finishes a deck (within play mode)-->
         <img src="/hachi-cheer-sprite.png" alt="cheerleader hachiware" class="icon">
         <p class="text-light-dark center baloo-2-regular">Deck complete!</p>
         <div>
