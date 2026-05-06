@@ -34,6 +34,7 @@
 - [ ] More than 10 questions
 - [ ] Make multiple sets
   - [ ] Maybe derivative rules next(?)
+  - [ ] trig identites
 - [ ] Add a timer that can function
 - [X] Try to make the options shuffle?
 - [X] Add a penalty for every wrong answer
