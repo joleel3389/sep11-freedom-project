@@ -140,7 +140,7 @@ h2 {
   background-color: #ffffff;
   font-size: 25px;
 }
-#unitCircle {
+#deck {
   display: flex;
   align-content: center;
   margin: auto;
@@ -166,6 +166,7 @@ input {
 #home .btn {
   width: 140px;
   height: 45px;
+  margin: 15px 15px 0px 15px;
 }
 .btn{
   background-color: #e0f6fbff;
@@ -177,6 +178,12 @@ input {
 }
 .btn:hover{
   background-color:#96bdc4;
+}
+#buttonAlign{
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 #questionaire{
@@ -203,7 +210,7 @@ input {
     background-color: #f9f9f9ff;
     padding: 180px 100px 0px 100px;
   }
-  #unitCircle{
+  #deck{
     /* width: 100%; */
     padding: 40px 0px 50px 30px;
   }
@@ -227,7 +234,7 @@ input {
     width:100%;
     padding: 100px 0px 110px 0px;
   }
-  #unitCircle{
+  #deck{
     width: 100%;
     padding: 50px 0px 60px 30px;
   }
@@ -236,7 +243,7 @@ input {
   }
 }
 @media (max-width: 630px){
-  #unitCircle{
+  #deck{
     width: 100%;
     padding: 40px 0px 50px 10px;
   }
@@ -270,7 +277,7 @@ input {
     width:100%;
     padding: 90px 0px 100px 0px;
   }
-  #unitCircle{
+  #deck{
     width: 100%;
     padding: 40px 0px 50px 14px;
   }
