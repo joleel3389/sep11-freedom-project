@@ -68,12 +68,12 @@
         deckNumber.value = "unitCircle"; // allows the check answer function to check strictly for the deck being used, in this case the unit circle.
 
         decks.value[deckNumber.value].questionaire.forEach(function(q){
-        // randomize choices using .sort() but instead of comparing actual values, use random
-        q.choices.sort(function() {
-            return Math.random() - 0.5
+            // randomize choices using .sort() but instead of comparing actual values, use random
+            q.choices.sort(function() {
+                return Math.random() - 0.5
+            });
+            // 5050 chance to get a negative number, hence subtraction
         });
-        // 5050 chance to get a negative number, hence subtraction
-    });
     }
 
     function derivativesDeck(){
@@ -81,12 +81,25 @@
         deckNumber.value = "derivatives"; // allows the check answer function to check strictly for the deck being used, in this case derivatives.
 
         decks.value[deckNumber.value].questionaire.forEach(function(q){
-        // randomize choices using .sort() but instead of comparing actual values, use random
-        q.choices.sort(function() {
-            return Math.random() - 0.5
+            // randomize choices using .sort() but instead of comparing actual values, use random
+            q.choices.sort(function() {
+                return Math.random() - 0.5
+            });
+            // 5050 chance to get a negative number, hence subtraction
         });
-        // 5050 chance to get a negative number, hence subtraction
-    });
+    }
+
+    function identitiesDeck(){
+        play.value = true;
+        deckNumber.value = "identities"; // allows the check answer function to check strictly for the deck being used, in this case identities.
+
+        decks.value[deckNumber.value].questionaire.forEach(function(q){
+            // randomize choices using .sort() but instead of comparing actual values, use random
+            q.choices.sort(function() {
+                return Math.random() - 0.5
+            });
+            // 5050 chance to get a negative number, hence subtraction
+        });
     }
 
     const decks = ref({ // object of decks
@@ -187,6 +200,45 @@
                     correct: "arcsin(x)"
                 }
             ]
+        },
+        identities: { // identities set
+            questionaire: [ //question array
+                {
+                    "question": "sin²(x) + cos²(x) = ___ ?",
+                    choices: ["1","sec²(x)","csc²(x)","0"],
+                    correct: "1"
+                },
+                {
+                    "question": "1 + tan²(x) = ___ ?",
+                    choices: ["tan2(x)","sec²(x)","csc²(x)","cot²(x)"],
+                    correct: "sec²(x)"
+                },
+                {
+                    "question": "1 + cot²(x) = ___ ?",
+                    choices: ["cot(x)sec(x)","sec²(x)","csc²(x)","cot(x)csc(x)"],
+                    correct: "csc²(x)"
+                },
+                {
+                    "question": "2sin(x)cos(x) = ___ ?",
+                    choices: ["sin2(x)","sin²(x)","cos²(x)","cos2(x)"],
+                    correct: "sin2(x)"
+                },
+                {
+                    "question": "cos²(x) - sin²(x) is equivalent to all EXCEPT?",
+                    choices: ["cos2(x)","1 - 2sin²(x)","2cos²x - 1","2sin(x) - 2cos(x)"],
+                    correct: "2sin(x) - 2cos(x)"
+                },
+                {
+                    "question": "(1 - cos 2x)/2 = ___ ?",
+                    choices: ["sin²(x)","sec²(x)","csc²(x)","cos²(x)"],
+                    correct: "sin²(x)"
+                },
+                {
+                    "question": "(1 + cos 2x)/2 = ___ ?",
+                    choices: ["sin²(x)","sec²(x)","csc²(x)","cos²(x)"],
+                    correct: "cos²(x)"
+                }
+            ]
         }
     })
 </script>
@@ -198,6 +250,7 @@
         <div id="buttonAlign">
         <button class="btn text-dark center poppins-regular" @click="unitCircleDeck()">Unit circle</button>
         <button class="btn text-dark center poppins-regular" @click="derivativesDeck()">Derivatives</button>
+        <button class="btn text-dark center poppins-regular" @click="identitiesDeck()">Identities</button>
         </div>
     </div>
     <div class="container-fluid" id="score" v-if="play"> <!-- only if the user is in play mode regardless of deck -->
