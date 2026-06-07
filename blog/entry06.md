@@ -11,7 +11,7 @@ For my final blog, it was time to present and give an elevator pitch on my freed
 
 ---
 
-In my previous blog, I was on the 5th and 6th steps of EDP, but I'm currently on the 7th step. For the 7th step, I'm going to be improving my presentation skills as needed, as I still think there are some areas for me to improve on. For instance, the volume of my voice or making more consistent and fair eye contact. Since this is my last blog, for next year I'd like to speak increasingly louder so it doesn't feel like I'm running out of breath so easily.
+In my previous blog, I was on the 5th and 6th steps of EDP, but I'm currently on the 7th step. For the 7th step, I'm going to be improving my presentation skills as needed, as I still think there are some areas for me to improve on. For instance, the volume of my voice or making more consistent and fair eye contact. Since this is my last blog, for next year I'd like to speak increasingly louder so it doesn't feel like I'm running out of breath so easily, which I can consider as moving onto step 8 (communicating the results).
 
 ### Skills
 
