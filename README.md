@@ -14,9 +14,14 @@ For my project, I chose to independently study the **Vue.js framework** in order
 
 ## Implications
 ##### PROS
-*
+* Big systems: My project can help education facilites improve active memorization in their calculus classes, whether AP or not.
+* Environment: My project may help save the amount of paper used to print worksheets for students' learning processes.
+* Finance: Instead of buying other subscriptions for other studying apps, users can use my website for free.
+* Individual: My project can help benefit the user or many students by providing them a way to learn with some fun visuals.
+
 ##### CONS
-*
+* Culture: My project may encourage people to be addicted to my mini-game.
+* Infastructure: Projects like mine may contribute to the carbon footprint, which will end up negatively impacting our environment in the long run.
 
 
 ## Blog
