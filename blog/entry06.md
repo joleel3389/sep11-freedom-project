@@ -29,6 +29,6 @@ Below are the skills I've learned while working on my blog.
 
 For my next steps, I'd like to move on to step 8: to communicate the results. I would like to continue to increase the pitch of my voice as I prepare to present in the SEP showcase!
 
-[Previous](entry05.md) | [Next](entry07.md)
+[Previous](entry05.md)
 
 [Home](../README.md)
